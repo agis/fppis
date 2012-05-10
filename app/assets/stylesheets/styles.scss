@@ -1,0 +1,120 @@
+
+$grey: #4D4D4D;
+$red: #F93E45;
+
+body {
+  font-family: SkarpaLt, Helvetica, Arial, sans-serif;
+  color: $grey;
+  line-height: 2em;
+}
+
+.container { margin-top: 30px; }
+
+div#logo {
+  margin-bottom: 20px;
+  line-height: 4em;
+
+  .header { font-size: 60px; }
+  .subheader { font-size: 16px; position:relative; top: 0.5em;}
+  a:hover { color: $red; }
+
+  a {
+    color: $grey;
+    text-decoration:none;
+  }
+}
+
+div#menu {
+  margin-top: 15%;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: right;
+
+  li { list-style-type: none;}
+  a:hover { color: $red; }
+
+  a {
+    color: $grey;
+    text-decoration: none;
+  }
+}
+
+div#content {
+  line-height: 2em;
+
+  #content-left {
+    border: 1px dotted #ccc;
+    margin-right: 2%;
+  }
+
+  #content-right {
+    border: 1px dotted #ccc;
+  }
+}
+
+
+#left, #right {
+  background: black;
+}
+
+div#footer {
+  text-align: right;
+  font-size: 14px;
+}
+
+@font-face {
+  font-family: SkarpaLt;
+    src: url('font/SkarpaLt.eot');
+    src: url('font/SkarpaLt.eot?iefix') format('eot'),
+         url('font/SkarpaLt.otf') format('opentype'),
+         url('font/SkarpaLt.ttf') format('truetype'),
+         url('font/SkarpaLt.svg') format('svg'),
+         url('font/SkarpaLt.woff') format('woff');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media handheld, only screen and (max-width: 767px) {
+
+  div#content {
+    #content-left {
+      margin-right: 0;
+    }
+  }
+
+  div#menu { text-align: center; }
+}
+
+
+/* ========================================== */
+/* ! Provide higher res assets for iPhone 4   */
+/* ========================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+/*  .logo {
+    background: url(logo2x.jpg) no-repeat;
+    background-size: 212px 303px;
+  }*/
+
+}

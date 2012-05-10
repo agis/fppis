@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fppis</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="row">
+    <div class="twocol" id="menu">
+      <%= render 'shared/menu' %>
+    </div>
+
+    <div class="tencol last" id="main">
+      <%= render 'shared/logo' %>
+
+      <div class="row" id="content">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'shared/footer' %>
+
+</div>
+
+</body>
+</html>
