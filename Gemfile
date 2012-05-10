@@ -17,4 +17,7 @@ group :production do
   gem 'pg'
 end
 
+gem 'execjs'
+gem 'therubyracer'
+
 # gem 'unicorn'
