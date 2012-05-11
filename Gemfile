@@ -6,6 +6,7 @@ gem 'jquery-rails'
 
 gem 'activeadmin'
 gem 'ckeditor', '3.7.0.rc3'
+gem 'paperclip'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

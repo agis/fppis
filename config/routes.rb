@@ -1,4 +1,6 @@
 Fppis::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
   root to: 'pages#index'
 
   match '/who'      =>  'Pages#who'
