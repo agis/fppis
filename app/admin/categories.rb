@@ -1,3 +1,3 @@
-ActiveAdmin.register Category do
+ActiveAdmin.register Category, as: 'Basic Categories' do
   
 end

@@ -2,6 +2,11 @@
 $grey: #4D4D4D;
 $red: #F93E45;
 
+@mixin er {
+  float: right;
+  margin-top: 30px;
+}
+
 body {
   font-family: SkarpaLt, Helvetica, Arial, sans-serif;
   color: $grey;
@@ -43,18 +48,30 @@ div#content {
   line-height: 2em;
 
   #content-left {
-    border: 1px dotted #ccc;
-    margin-right: 2%;
+    border-right: 1px solid #ddd;
+    margin-right: 1%;
   }
 
-  #content-right {
-    border: 1px dotted #ccc;
+  #post-details {
+    min-height:100px;
+    line-height: 45px;
+    .date, .onecol { font-size:13px; color: #aaa; }
+    .title-label { color: $red; margin-right: 7px; }
+    .subtitle { font-size: 20px; margin-left: 71px; }
   }
-}
 
+  #post-body {
+    .elevencol { @include er; }
+  }
 
-#left, #right {
-  background: black;
+  #post-credits {
+    .elevencol {
+      @include er;
+      border: 1px dotted #ddd;
+    }
+  }
+
+  .contentwrapper { padding: 10px; }
 }
 
 div#footer {
@@ -72,7 +89,15 @@ div#footer {
          url('font/SkarpaLt.woff') format('woff');
 }
 
+h1 { font-size: 30px;}
 
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 0;
+}
 
 
 
