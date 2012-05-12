@@ -9,3 +9,9 @@
 Category.create title: 'Food'
 Category.create title: 'People'
 Category.create title: 'Places'
+
+Author.create name: 'Corey Tai'
+Author.create name: 'Agis Anastasopoulos'
+
+Photographer.create name: 'A photographer!'
+Photographer.create name: 'A happy photographer'
