@@ -1,7 +1,6 @@
 <div class="contentwrapper" id="post-details">
   <div class="onecol date">
-    5 April<br />
-    2012
+    <%= format_date(post.publish_date) %>
   </div>
 
   <div class="elevencol last">
@@ -27,8 +26,9 @@
 
 <div class="contentwrapper" id="post-credits">
   <div class="elevencol last">
-    Story by <%= post.author.name %><br />
-    Photos by <%= post.photographer.name %>
+    <%# TODO: remove comments %>
+    Story by <%#= post.author.name %><br />
+    Photos by <%#= post.photographer.name %>
   </div>
 
   <div class="twelvecol last">

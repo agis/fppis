@@ -5,6 +5,8 @@ ActiveAdmin.register Post do
       f.input :category_title
       f.input :story_title
       f.input :story_subtitle
+      f.input :publish_date, :label => "Published Date"
+      f.input :published
     end
 
     f.inputs "Content" do
