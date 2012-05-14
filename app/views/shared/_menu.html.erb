@@ -1,7 +1,10 @@
 <ul>
-  <li><%= link_to "Home", root_path %></li>
+  <% unless current_page?(root_path) %>
+  <li style="text-align: center;"><%= link_to "Home", root_path %></li>
+  <% end %>
+
   <li><%= link_to "Who", who_path %></li>
-  <li><%= link_to "Blogs", posts_path %></a></li>
-  <li><a href="#">Images</a></li>
+  <li style="font-size: 40px;"><%= link_to "Blogs", posts_path %></a></li>
+  <li style="font-size: 40px; margin-left: 15px;"><a href="#">Images</a></li>
   <li><%= link_to "Contact", contact_path %></li>
 </ul>
