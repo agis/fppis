@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
   belongs_to :author
   belongs_to :photographer
 
-  acts_as_taggable_on :tags
+  acts_as_taggable
 
   scope :published, where(:published => true).order("created_at DESC")
 
