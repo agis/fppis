@@ -7,7 +7,7 @@ ActiveAdmin.register Post do
       f.input :story_subtitle
       f.input :publish_date, label: 'Published Date'
       f.input :published
-      f.input :tag_list, label: 'Tags'
+      f.input :tag_list, label: 'Tags', :hint => "Comma separated"
     end
 
     f.inputs "Content" do
