@@ -7,6 +7,11 @@ ActiveAdmin.register Post do
       f.input :story_subtitle
       f.input :publish_date, :label => "Published Date"
       f.input :published
+      f.input :tag_list, :label => "Tags",
+                         :as => :select,
+                         :multiple => :true,
+                         :input_html => { :size => "7" },
+                         :collection => ActsAsTaggableOn::Tag.all
     end
 
     f.inputs "Content" do
@@ -20,4 +25,12 @@ ActiveAdmin.register Post do
 
     f.buttons
   end
+
+
+    def create
+      create! do |format|
+      return redirect_to "/admin/posts", :notice => "New Campaign created!"
+      end
+    end
+
 end

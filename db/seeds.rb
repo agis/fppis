@@ -6,12 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Category.create title: 'Food'
-Category.create title: 'People'
-Category.create title: 'Places'
+AdminUser.create! email: 'admin@example.com', password: 'password', password_confirmation: 'password'
 
-Author.create name: 'Corey Tai'
-Author.create name: 'Agis Anastasopoulos'
+Category.create! title: 'Food'
+Category.create! title: 'People'
+Category.create! title: 'Places'
 
-Photographer.create name: 'A photographer!'
-Photographer.create name: 'A happy photographer'
+Author.create! name: 'Corey Tai'
+Author.create! name: 'Agis Anastasopoulos'
+
+Photographer.create! name: 'A photographer!'
+Photographer.create! name: 'A happy photographer'
+
+ActsAsTaggableOn::Tag.create! name: 'a-tag'
+ActsAsTaggableOn::Tag.create! name: 'another-tag'

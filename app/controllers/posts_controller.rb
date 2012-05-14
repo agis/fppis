@@ -1,7 +1,11 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.published.all
+    if params[:c]
+      @posts = Post.published.where("category_id = ?", params[:c])
+    else
+      @posts = Post.published.all
+    end
   end
 
   def show

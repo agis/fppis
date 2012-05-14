@@ -1,4 +1,13 @@
-<h3>View By Month</h3>
+Categories
+<% Category.all.each do |category| %>
+<h2>
+  <%= link_to category.title, posts_path(:c => category.id) %>
+</h2>
+<% end %>
+
+<br />
+
+View By Month<br />
 <a href="#">
 January<br />
 February<br />
