@@ -61,15 +61,8 @@ div#content {
     .subtitle { font-size: 20px; margin-left: 71px; }
   }
 
-  #post-body {
+  #post-body, #post-credits {
     .elevencol { @include er; }
-  }
-
-  #post-credits {
-    .elevencol {
-      @include er;
-      border: 1px dotted #ddd;
-    }
   }
 
   .contentwrapper { padding: 10px; }

@@ -1,11 +1,9 @@
 class PostsController < ApplicationController
 
   def index
-    if params[:c]
-      @posts = Post.published.where("category_id = ?", params[:c])
-    else
-      @posts = Post.published.all
-    end
+    @posts = Post.published.all
+    @posts = Post.published.where("category_id = ?", params[:c]) if params[:c]
+    @posts = Post.tagged_with(params[:tag]) if params[:tag]
   end
 
   def show
