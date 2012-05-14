@@ -1,6 +1,4 @@
 Fppis::Application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
-
   root to: 'pages#index'
 
   match '/who'      =>  'Pages#who'
@@ -10,4 +8,5 @@ Fppis::Application.routes.draw do
 
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
+  mount Ckeditor::Engine => '/ckeditor'
 end
