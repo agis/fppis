@@ -20,4 +20,6 @@ group :production do
   gem 'pg'
   gem 'execjs'
   gem 'therubyracer'
+  gem 'aws-s3'
+  gem 'aws-sdk'
 end

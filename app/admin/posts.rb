@@ -1,5 +1,5 @@
 # OPTIMIZE: Add hints
-
+# TODO: Add preview functionality
 ActiveAdmin.register Post do
   menu :priority => 2
   form do |f|
