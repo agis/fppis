@@ -9,7 +9,7 @@ ActiveAdmin.register Post do
       f.input :publish_date, label: 'Published Date'
       f.input :country
       f.input :city, label: 'City / Town'
-      # TODO: make this a multi-select field (later)
+      # LATER: make this a multi-select field (later)
       f.input :tag_list, label: 'Tags', hint: 'Comma separated'
     end
 
