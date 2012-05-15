@@ -1,7 +1,7 @@
 # OPTIMIZE: Add hints
 
 ActiveAdmin.register Post do
-  # OPTIMIZE: Give higher priority:  menu :priority => 1
+  menu :priority => 2
   form do |f|
     f.inputs "Details", :multipart => true do
       f.input :published

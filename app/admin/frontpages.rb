@@ -1,4 +1,5 @@
-ActiveAdmin.register Frontpage, as: 'Frontpage' do
+ActiveAdmin.register Frontpage do
+  menu :priority => 1
   config.clear_sidebar_sections!
 
   form do |f|

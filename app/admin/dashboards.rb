@@ -5,6 +5,15 @@ ActiveAdmin::Dashboards.build do
   # rendered on the dashboard in the context of the view. So just
   # return the content which you would like to display.
 
+# section "Current Frontpage" do
+#   div do
+#     image_tag Frontpage.last.main.url
+#   end
+#   div do
+#     Frontpage.last.updated_at
+#   end
+# end
+
   # == Simple Dashboard Section
   # Here is an example of a simple dashboard section
   #
