@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
   def index
+    @main = FpImage.last.main
   end
 
   def who
