@@ -1,8 +1,8 @@
+# TODO: rename this to Homepage
 class Frontpage < ActiveRecord::Base
   attr_accessible :main, :first, :second, :third
 
-  # TODO: add validations
-  # TODO: ask Corey about styles
+  # TODO: add validations about image sizes
   has_attached_file :main, :styles => { :thumb => "125x125>" },
                       storage: :s3,
                       bucket:  'fppis',
