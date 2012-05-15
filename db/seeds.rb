@@ -17,6 +17,3 @@ Author.create! name: 'Agis Anastasopoulos'
 
 Photographer.create! name: 'A photographer!'
 Photographer.create! name: 'A happy photographer'
-
-ActsAsTaggableOn::Tag.create! name: 'a-tag'
-ActsAsTaggableOn::Tag.create! name: 'another-tag'

@@ -1,4 +1,4 @@
-class FpImage < ActiveRecord::Base
+class Frontpage < ActiveRecord::Base
   attr_accessible :main, :first, :second, :third
 
   has_attached_file :main, :styles => { :thumb => "125x125>" }

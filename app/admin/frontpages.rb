@@ -1,4 +1,4 @@
-ActiveAdmin.register FpImage, as: 'Frontpage' do
+ActiveAdmin.register Frontpage, as: 'Frontpage' do
   config.clear_sidebar_sections!
 
   form do |f|
