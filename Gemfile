@@ -8,6 +8,7 @@ gem 'activeadmin'
 gem 'ckeditor', '3.7.0.rc3'
 gem 'paperclip'
 gem 'acts-as-taggable-on', '~> 2.2.2'
+gem 'country-select'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

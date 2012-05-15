@@ -4,7 +4,8 @@ class Post < ActiveRecord::Base
                   :story_title, :story_subtitle,
                   :author_id, :photographer_id,
                   :published, :publish_date,
-                  :tag_list
+                  :tag_list, :country,
+                  :city
 
   belongs_to :category
   belongs_to :author

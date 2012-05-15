@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120514122634) do
+ActiveRecord::Schema.define(:version => 20120515155006) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -90,6 +90,8 @@ ActiveRecord::Schema.define(:version => 20120514122634) do
     t.integer  "photographer_id"
     t.boolean  "published",       :default => false, :null => false
     t.date     "publish_date"
+    t.string   "country"
+    t.string   "city"
   end
 
   create_table "taggings", :force => true do |t|
