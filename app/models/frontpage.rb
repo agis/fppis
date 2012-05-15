@@ -12,7 +12,7 @@ class Frontpage < ActiveRecord::Base
                       },
                       s3_host_name: 's3-eu-west-1.amazonaws.com'
 
-  has_attached_file :first, :styles => { :thumb => "125x125>" }
+  has_attached_file :first, :styles => { :thumb => "125x125>" },
                       storage: :s3,
                       bucket:  'fppis',
                       s3_credentials: {
@@ -21,7 +21,7 @@ class Frontpage < ActiveRecord::Base
                       },
                       s3_host_name: 's3-eu-west-1.amazonaws.com'
 
-  has_attached_file :second, :styles => { :thumb => "125x125>" }
+  has_attached_file :second, :styles => { :thumb => "125x125>" },
                       storage: :s3,
                       bucket:  'fppis',
                       s3_credentials: {
@@ -30,7 +30,7 @@ class Frontpage < ActiveRecord::Base
                       },
                       s3_host_name: 's3-eu-west-1.amazonaws.com'
 
-  has_attached_file :third, :styles => { :thumb => "125x125>" }
+  has_attached_file :third, :styles => { :thumb => "125x125>" },
                       storage: :s3,
                       bucket:  'fppis',
                       s3_credentials: {
