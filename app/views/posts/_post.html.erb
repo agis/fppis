@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<%# TODO: reduce the margin-top here %>
+<%# OPTIMIZE: reduce the margin-top here (SURE? ASK COREY FIRST, cause that post had an extra <p>) %>
 <div class="contentwrapper" id="post-body">
   <div class="elevencol last">
     <%= raw post.content %>
@@ -27,14 +27,12 @@
 
 <div class="contentwrapper" id="post-credits">
   <div class="elevencol last">
-    <%# TODO: remove comments %>
     Story by <%= post.author.name %><br />
     Images by <%= post.photographer.name %>
   </div>
 
-  <%# TODO: show tags %>
   <div class="elevencol last">
-    Tags: 
+    Tags:
     <% post.tags.each do |tag| %>
     <%= link_to tag.name, posts_path(:tag => tag.name) %>
     <% end %>

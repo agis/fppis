@@ -14,7 +14,6 @@ ActiveAdmin.register Post do
     end
 
     f.inputs "Content" do
-      # TODO: reduce ckeditor width to match the frontpage div's width
       f.input :content, as: :ckeditor, label: false,
                         input_html: { width: 640, height: 500 }
     end
