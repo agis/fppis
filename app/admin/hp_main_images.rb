@@ -43,28 +43,12 @@ ActiveAdmin.register HpMainImage do
     end
   end
 
-  show do |ad|
-    attributes_table do
-      row '#1' do
-        image_tag(ad.one.url(:thumb))
-      end
-      row '#2' do
-        image_tag(ad.two.url(:thumb))
-      end
-      row '#3' do
-        image_tag(ad.three.url(:thumb))
-      end
-      row '#4' do
-        image_tag(ad.four.url(:thumb))
-      end
-      row '#5' do
-        image_tag(ad.five.url(:thumb))
-      end
-      row '#6' do
-        image_tag(ad.six.url(:thumb))
+  controller do
+    def show
+      show! do |format|
+        format.html { redirect_to admin_hp_main_images_path }
       end
     end
-    active_admin_comments
   end
 
 
