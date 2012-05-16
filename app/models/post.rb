@@ -11,11 +11,11 @@ class Post < ActiveRecord::Base
   belongs_to :author
   belongs_to :photographer
 
-  paginates_per 1
+  paginates_per 3
 
   acts_as_taggable
 
-  scope :published, where(:published => true).order("created_at DESC")
+  scope :published, where(:published => true).order("publish_date DESC")
 
   # LATER: add validations
   # TODO: add pagination using Kaminari
