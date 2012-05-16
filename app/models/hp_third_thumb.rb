@@ -1,4 +1,4 @@
-class HpMainImage < ActiveRecord::Base
+class HpThirdThumb < ActiveRecord::Base
   attr_accessible :one, :two, :three, :four, :five, :six
 
   s3_host = 's3-eu-west-1.amazonaws.com'
@@ -34,7 +34,3 @@ class HpMainImage < ActiveRecord::Base
                       s3_credentials: s3_credentials,
                       s3_host_name: s3_host
 end
-
-# TODO: add image validations when Corey sends me sizes
-# TODO: add Links for each image. 6 links will needed, :one_link, :two_link etc.
-# so add these fields, of integer

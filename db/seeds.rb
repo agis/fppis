@@ -9,6 +9,9 @@
 AdminUser.create email: 'admin@example.com', password: 'password', password_confirmation: 'password'
 
 HpMainImage.create! if HpMainImage.count == 0
+HpFirstThumb.create! if HpFirstThumb.count == 0
+HpSecondThumb.create! if HpSecondThumb.count == 0
+HpThirdThumb.create! if HpThirdThumb.count == 0
 
 Category.create title: 'Food'
 Category.create title: 'People'

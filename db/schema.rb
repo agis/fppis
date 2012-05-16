@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120516131257) do
+ActiveRecord::Schema.define(:version => 20120516205427) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -72,7 +72,94 @@ ActiveRecord::Schema.define(:version => 20120516131257) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
+  create_table "hp_first_thumbs", :force => true do |t|
+    t.string   "one_file_name"
+    t.string   "one_content_type"
+    t.integer  "one_file_size"
+    t.datetime "one_updated_at"
+    t.string   "two_file_name"
+    t.string   "two_content_type"
+    t.integer  "two_file_size"
+    t.datetime "two_updated_at"
+    t.string   "three_file_name"
+    t.string   "three_content_type"
+    t.integer  "three_file_size"
+    t.datetime "three_updated_at"
+    t.string   "four_file_name"
+    t.string   "four_content_type"
+    t.integer  "four_file_size"
+    t.datetime "four_updated_at"
+    t.string   "five_file_name"
+    t.string   "five_content_type"
+    t.integer  "five_file_size"
+    t.datetime "five_updated_at"
+    t.string   "six_file_name"
+    t.string   "six_content_type"
+    t.integer  "six_file_size"
+    t.datetime "six_updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
   create_table "hp_main_images", :force => true do |t|
+    t.string   "one_file_name"
+    t.string   "one_content_type"
+    t.integer  "one_file_size"
+    t.datetime "one_updated_at"
+    t.string   "two_file_name"
+    t.string   "two_content_type"
+    t.integer  "two_file_size"
+    t.datetime "two_updated_at"
+    t.string   "three_file_name"
+    t.string   "three_content_type"
+    t.integer  "three_file_size"
+    t.datetime "three_updated_at"
+    t.string   "four_file_name"
+    t.string   "four_content_type"
+    t.integer  "four_file_size"
+    t.datetime "four_updated_at"
+    t.string   "five_file_name"
+    t.string   "five_content_type"
+    t.integer  "five_file_size"
+    t.datetime "five_updated_at"
+    t.string   "six_file_name"
+    t.string   "six_content_type"
+    t.integer  "six_file_size"
+    t.datetime "six_updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "hp_second_thumbs", :force => true do |t|
+    t.string   "one_file_name"
+    t.string   "one_content_type"
+    t.integer  "one_file_size"
+    t.datetime "one_updated_at"
+    t.string   "two_file_name"
+    t.string   "two_content_type"
+    t.integer  "two_file_size"
+    t.datetime "two_updated_at"
+    t.string   "three_file_name"
+    t.string   "three_content_type"
+    t.integer  "three_file_size"
+    t.datetime "three_updated_at"
+    t.string   "four_file_name"
+    t.string   "four_content_type"
+    t.integer  "four_file_size"
+    t.datetime "four_updated_at"
+    t.string   "five_file_name"
+    t.string   "five_content_type"
+    t.integer  "five_file_size"
+    t.datetime "five_updated_at"
+    t.string   "six_file_name"
+    t.string   "six_content_type"
+    t.integer  "six_file_size"
+    t.datetime "six_updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "hp_third_thumbs", :force => true do |t|
     t.string   "one_file_name"
     t.string   "one_content_type"
     t.integer  "one_file_size"

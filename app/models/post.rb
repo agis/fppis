@@ -17,6 +17,5 @@ class Post < ActiveRecord::Base
 
   scope :published, where(:published => true).order("publish_date DESC")
 
-  # LATER: add validations
-  # TODO: add pagination using Kaminari
+  # TODO: add validations
 end
