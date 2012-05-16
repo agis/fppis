@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.published.paginate(:page => params[:page])
+    @posts = Post.published.all
     @posts = Post.published.where("category_id = ?", params[:c]) if params[:c]
     @posts = Post.published.tagged_with(params[:tag]) if params[:tag]
   end

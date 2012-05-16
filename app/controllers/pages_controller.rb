@@ -1,10 +1,7 @@
 class PagesController < ApplicationController
 
   def index
-    @main = Homepage.last.main
-    @first = Homepage.last.first
-    @second = Homepage.last.second
-    @third = Homepage.last.third
+    @main_image = FpMainImage.first
   end
 
   def who

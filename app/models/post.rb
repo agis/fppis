@@ -16,8 +16,6 @@ class Post < ActiveRecord::Base
 
   scope :published, where(:published => true).order("created_at DESC")
 
-  self.per_page = 3
-
   # LATER: add validations
-  # TODO: add pagination
+  # TODO: add pagination using Kaminari
 end

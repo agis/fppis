@@ -1,24 +1,29 @@
 <%# LATER: Make these rotate (javascript plugin) %>
 <div class="ninecol" id="left">
-  <%= image_tag @main %>
+  <%= image_tag @main_image.one.url %>
+  <%= image_tag @main_image.two.url %>
+  <%= image_tag @main_image.three.url %>
+  <%= image_tag @main_image.four.url %>
+  <%= image_tag @main_image.five.url %>
+  <%= image_tag @main_image.six.url %>
 </div>
 
 <div class="threecol last" id="right">
   <div class="row">
     <div class="twelvecol">
-      <%= image_tag @first %>
+      first thumb
     </div>
   </div>
 
   <div class="row">
     <div class="twelvecol">
-      <%= image_tag @second %>
+      second thumb
     </div>
   </div>
 
   <div class="row">
     <div class="twelvecol">
-      <%= image_tag @third %>
+      third thumb
     </div>
   </div>
 </div>
