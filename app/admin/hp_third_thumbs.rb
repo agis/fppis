@@ -11,7 +11,7 @@ ActiveAdmin.register HpThirdThumb do
       f.input :four
       f.input :five
       f.input :six
-      f.input :all_images, :as => :preview
+      f.input :preview, :as => :third_thumb
     end
 
     f.buttons

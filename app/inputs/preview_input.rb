@@ -1,4 +1,3 @@
-# FIXME: More Inputs for the other areas
 class PreviewInput
   include Formtastic::Inputs::Base
   def to_html

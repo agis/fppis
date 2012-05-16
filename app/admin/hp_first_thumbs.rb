@@ -11,7 +11,7 @@ ActiveAdmin.register HpFirstThumb do
       f.input :four
       f.input :five
       f.input :six
-      f.input :all_images, :as => :preview
+      f.input :preview, :as => :first_thumb
     end
 
     f.buttons
@@ -53,6 +53,7 @@ ActiveAdmin.register HpFirstThumb do
 
   sidebar " " do
     raise "More than one Homepage resources detected. Contact the developer please." if HpFirstThumb.count > 1
+    # OPTIMIZE: Make this a button instead and also on all the other sidebars
     link_to 'Edit Images', edit_admin_hp_first_thumb_path(HpFirstThumb.first)
   end
 end
