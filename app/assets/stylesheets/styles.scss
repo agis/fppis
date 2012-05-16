@@ -30,6 +30,8 @@ div#logo {
 }
 
 div#menu {
+  width: 245px;
+  margin-right: 0;
   margin-top: 15%;
   font-size: 25px;
   text-transform: uppercase;
@@ -45,16 +47,20 @@ div#menu {
   }
 }
 
+div#main { width: 895px; }
+
+
 div#content {
   line-height: 2em;
 
-  #content-left {
-    border-right: 1px solid #ddd;
-    margin-right: 1%;
+  #left {
+    width: 650px;
+    margin-right: 0;
   }
 
-  #content-left-main {
-    border-right: none;
+  #right {
+    width: 245px;
+    margin: 0;
   }
 
   #post-details {
