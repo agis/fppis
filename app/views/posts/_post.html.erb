@@ -20,7 +20,12 @@
 
 <div class="contentwrapper" id="post-body">
   <div class="elevencol last">
-    <%= raw post.content %>
+    <% if controller.action_name == 'index' %>
+      <%= raw smart_truncate(post.content, :words => 3) %>
+      <%= link_to 'Read More', post %>
+    <% else %>
+      <%= raw post.content %>
+    <% end %>
   </div>
 </div>
 

@@ -171,6 +171,7 @@ GEM
     uuidtools (2.1.2)
     warden (1.1.1)
       rack (>= 1.0)
+    will_paginate (3.0.3)
     xml-simple (1.1.1)
 
 PLATFORMS
@@ -193,3 +194,4 @@ DEPENDENCIES
   sqlite3
   therubyracer
   uglifier (>= 1.0.3)
+  will_paginate (~> 3.0)

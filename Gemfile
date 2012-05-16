@@ -9,9 +9,10 @@ gem 'ckeditor', '3.7.0.rc3'
 gem 'paperclip'
 gem 'acts-as-taggable-on', '~> 2.2.2'
 gem 'country-select'
+gem 'will_paginate', '~> 3.0'
 
-  gem 'aws-s3'
-  gem 'aws-sdk'
+gem 'aws-s3'
+gem 'aws-sdk'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

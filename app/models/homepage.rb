@@ -25,4 +25,5 @@ class Homepage < ActiveRecord::Base
                       s3_credentials: s3_credentials,
                       s3_host_name: s3_host
 
+  has_one :post
 end

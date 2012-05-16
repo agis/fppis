@@ -10,10 +10,13 @@ class Post < ActiveRecord::Base
   belongs_to :category
   belongs_to :author
   belongs_to :photographer
+  # belongs_to :homepage
 
   acts_as_taggable
 
   scope :published, where(:published => true).order("created_at DESC")
+
+  self.per_page = 3
 
   # LATER: add validations
   # TODO: add pagination
