@@ -1,10 +1,10 @@
 class PagesController < ApplicationController
 
   def index
-    @main = Frontpage.last.main
-    @first = Frontpage.last.first
-    @second = Frontpage.last.second
-    @third = Frontpage.last.third
+    @main = Homepage.last.main
+    @first = Homepage.last.first
+    @second = Homepage.last.second
+    @third = Homepage.last.third
   end
 
   def who

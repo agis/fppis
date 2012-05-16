@@ -10,6 +10,9 @@ gem 'paperclip'
 gem 'acts-as-taggable-on', '~> 2.2.2'
 gem 'country-select'
 
+  gem 'aws-s3'
+  gem 'aws-sdk'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -20,6 +23,4 @@ group :production do
   gem 'pg'
   gem 'execjs'
   gem 'therubyracer'
-  gem 'aws-s3'
-  gem 'aws-sdk'
 end

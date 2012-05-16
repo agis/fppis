@@ -16,5 +16,5 @@ class Post < ActiveRecord::Base
   scope :published, where(:published => true).order("created_at DESC")
 
   # LATER: add validations
-
+  # TODO: add pagination
 end
