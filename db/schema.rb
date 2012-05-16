@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(:version => 20120516131257) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
-  create_table "fp_main_images", :force => true do |t|
+  create_table "hp_main_images", :force => true do |t|
     t.string   "one_file_name"
     t.string   "one_content_type"
     t.integer  "one_file_size"

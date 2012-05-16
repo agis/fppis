@@ -1,4 +1,4 @@
-class FpMainImage < ActiveRecord::Base
+class HpMainImage < ActiveRecord::Base
   attr_accessible :one, :two, :three, :four, :five, :six
 
   s3_host = 's3-eu-west-1.amazonaws.com'

@@ -8,12 +8,14 @@
 
 AdminUser.create email: 'admin@example.com', password: 'password', password_confirmation: 'password'
 
-Category.create! title: 'Food'
-Category.create! title: 'People'
-Category.create! title: 'Places'
+HpMainImage.create! if HpMainImage.count == 0
 
-Author.create! name: 'Corey Tai'
-Author.create! name: 'Agis Anastasopoulos'
+Category.create title: 'Food'
+Category.create title: 'People'
+Category.create title: 'Places'
 
-Photographer.create! name: 'A photographer!'
-Photographer.create! name: 'A happy photographer'
+Author.create name: 'Corey Tai'
+Author.create name: 'Agis Anastasopoulos'
+
+Photographer.create name: 'A photographer!'
+Photographer.create name: 'A happy photographer'

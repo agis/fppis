@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def index
-    @main_image = FpMainImage.first
+    @main_image = HpMainImage.first
   end
 
   def who

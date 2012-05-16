@@ -1,6 +1,6 @@
-class CreateFpMainImages < ActiveRecord::Migration
+class CreateHpMainImages < ActiveRecord::Migration
   def change
-    create_table :fp_main_images do |t|
+    create_table :hp_main_images do |t|
       t.has_attached_file :one
       t.has_attached_file :two
       t.has_attached_file :three

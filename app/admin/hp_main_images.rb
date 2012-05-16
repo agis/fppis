@@ -1,5 +1,5 @@
-ActiveAdmin.register FpMainImage do
-  menu :parent => "Frontpage", :label => 'Main Image Area'
+ActiveAdmin.register HpMainImage do
+  menu :parent => "Homepage", :label => 'Main Image Area'
   config.clear_sidebar_sections!
   actions :all, :except => [:new, :destroy]
 
@@ -69,7 +69,7 @@ ActiveAdmin.register FpMainImage do
 
 
   sidebar " " do
-    raise "More than one Homepage resources detected. Contact the developer please." unless FpMainImage.count == 1
-    link_to 'Edit Images', edit_admin_fp_main_image_path(FpMainImage.first)
+    raise "More than one Homepage resources detected. Contact the developer please." if HpMainImage.count > 1
+    link_to 'Edit Images', edit_admin_hp_main_image_path(HpMainImage.first)
   end
 end
