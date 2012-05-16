@@ -5,7 +5,7 @@ ActiveAdmin.register HpMainImage do
 
   form do |f|
     f.inputs "Images", :multipart => true do
-      f.input :one
+      f.input :one # TODO: add hints when Corey sends me exact sizes
       f.input :two
       f.input :three
       f.input :four

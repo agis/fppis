@@ -34,3 +34,5 @@ class HpMainImage < ActiveRecord::Base
                       s3_credentials: s3_credentials,
                       s3_host_name: s3_host
 end
+
+# TODO: add image validations when Corey sends me sizes

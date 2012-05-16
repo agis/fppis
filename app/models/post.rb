@@ -10,7 +10,8 @@ class Post < ActiveRecord::Base
   belongs_to :category
   belongs_to :author
   belongs_to :photographer
-  # belongs_to :homepage
+
+  paginates_per 1
 
   acts_as_taggable
 
