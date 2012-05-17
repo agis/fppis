@@ -9,21 +9,9 @@
 </div>
 
 <div class="threecol last" id="right">
-  <div class="row">
-    <div class="twelvecol">
-      <%= image_tag @first_thumb.one.url %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="twelvecol">
-      <%= image_tag @second_thumb.one.url %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="twelvecol">
-      <%= image_tag @third_thumb.one.url %>
-    </div>
-  </div>
+<div style="margin-left: 25px; line-height: 0">
+      <img src="<%= @first_thumb.one.url %>" style="margin-bottom:5px"/>
+      <img src="<%= @second_thumb.one.url %>" style="margin-bottom:5px"/>
+      <img src="<%= @third_thumb.one.url %>"/>
+</div>
 </div>

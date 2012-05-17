@@ -1,5 +1,6 @@
 class HpMainImage < ActiveRecord::Base
   attr_accessible :one, :two, :three, :four, :five, :six
+  # FINAL SIZE: 650x439
 
   s3_host = 's3-eu-west-1.amazonaws.com'
   s3_credentials = "#{Rails.root}/config/s3.yml"

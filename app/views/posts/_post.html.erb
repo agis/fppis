@@ -1,20 +1,26 @@
-<div class="contentwrapper" id="post-details">
-  <div class="onecol date">
-    <%= format_date(post.publish_date) %>
+<div id="post-details">
+  <div class="row">
+    <div class="twocol">
+      <h1 class="title-label"><%= post.category.title.singularize %></h1>
+    </div>
+    <%= post.category_title %>
   </div>
 
-  <div class="elevencol last">
-    <h1><span class="title-label">
-      <%= post.category.title.singularize %></span> <%= post.category_title %>
-    </h1>
+  <div class="row">
+    <div class="twocol">
+      <h1 class="title-label">Story</h1>
+    </div>
+    <%= post.story_title %>
+  </div>
 
-    <h1>
-      <span class="title-label">Story</span> <%= post.story_title %>
-    </h1>
+  <div class="row">
+    <div class="twocol"></div>
+    <div class="subtitle"><%= post.story_subtitle %></div>
+  </div>
 
-    <span class="subtitle">
-      <%= post.story_subtitle %>
-    </span>
+  <div class="row">
+    <div class="twocol"></div>
+    <span class="date"><%= format_date(post.publish_date) %></span>
   </div>
 </div>
 

@@ -66,21 +66,17 @@ div#content {
   #post-details {
     min-height:100px;
     line-height: 45px;
-    .title-label { color: $red; margin-right: 7px; }
-    .subtitle { font-size: 20px; margin-left: 71px; }
+    .title-label { color: $red; }
+    .subtitle { font-size: 20px; }
 
-    .date, .onecol {
-      font-size:17px;
-      line-height: 25px;
-      margin-top:5px;
-    }
+    .date { font-size:17px; }
+
+    .row { font-size: 25px; }
   }
 
   #post-body, #post-credits {
     .elevencol { @include er; }
   }
-
-  .contentwrapper { padding: 10px; }
 }
 
 div#footer {
