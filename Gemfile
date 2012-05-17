@@ -10,6 +10,7 @@ gem 'paperclip'
 gem 'acts-as-taggable-on', '~> 2.2.2'
 gem 'country-select'
 
+gem 'thin'
 
 gem 'aws-s3'
 gem 'aws-sdk'
