@@ -1,6 +1,6 @@
 module ApplicationHelper
   def format_date(d)
-    raw d.strftime "%Y %b %d"
+    raw d.strftime "%B %d, %Y"
   end
 
   def smart_truncate(s, opts = {})

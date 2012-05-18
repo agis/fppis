@@ -24,8 +24,8 @@
   </div>
 </div>
 
-<div class="contentwrapper" id="post-body">
-  <div class="elevencol last">
+<div id="post-body">
+  <div class="twelvecol last">
     <% if controller.action_name == 'index' %>
       <%= raw smart_truncate(post.content, :words => 3) %>
       <%= link_to 'Read More', post %>
@@ -35,13 +35,13 @@
   </div>
 </div>
 
-<div class="contentwrapper" id="post-credits">
-  <div class="elevencol last">
+<div id="post-credits">
+  <div class="twelvecol last">
     Story by <%= post.author.name %><br />
     Images by <%= post.photographer.name %>
   </div>
 
-  <div class="elevencol last">
+  <div class="twelvecol last">
     Tags:
     <% post.tags.each do |tag| %>
     <%= link_to tag.name, posts_path(:tag => tag.name) %>

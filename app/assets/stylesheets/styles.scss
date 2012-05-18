@@ -68,14 +68,8 @@ div#content {
     line-height: 45px;
     .title-label { color: $red; }
     .subtitle { font-size: 20px; }
-
     .date { font-size:17px; }
-
     .row { font-size: 25px; }
-  }
-
-  #post-body, #post-credits {
-    .elevencol { @include er; }
   }
 }
 
