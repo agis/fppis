@@ -1,20 +1,20 @@
-Categories
-<% Category.all.each do |category| %>
-<h2>
-  <%= link_to category.title, posts_path(:c => category.id) %>
-</h2>
-<% end %>
+<div id="post-menu">
+  <h3>Categories</h3>
+  <% Category.all.each do |category| %>
+  <h2>
+    <%= link_to category.title, posts_path(:c => category.id) %>
+  </h2>
+  <% end %>
 
-<br />
+  <br />
 
-<%# LATER: Implement Month menu %>
-View By Month<br />
-<a href="#">
-January<br />
-February<br />
-March<br />
-April<br />
-May<br />
-June<br />
-July
-</a>
+  <%# LATER: Implement Month menu %>
+  <h3>Archive</h3>
+  June<br />
+  May<br />
+  April<br />
+  March<br />
+  February<br />
+  January
+
+</div>

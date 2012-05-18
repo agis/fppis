@@ -18,7 +18,7 @@ ActiveAdmin.register Post do
     f.inputs "Content" do
       # FIXME: upload using paperclip and Amazon s3
       f.input :content, as: :ckeditor, label: false,
-                        input_html: { width: 640, height: 500 }
+                        input_html: { width: 695, height: 700 }
     end
 
    f.inputs "Credits" do

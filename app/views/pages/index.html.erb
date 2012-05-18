@@ -1,12 +1,17 @@
 <%# LATER: Make these rotate (javascript plugin) %>
 <div class="ninecol" id="left">
   <div class="slideshow">
-  <%= image_tag @main_images.one.url %>
-  <%= image_tag @main_images.two.url %>
-  <%= image_tag @main_images.three.url %>
-  <%= image_tag @main_images.four.url %>
-  <%= image_tag @main_images.five.url %>
-  <%= image_tag @main_images.six.url %>
+    <div class="slide">
+      <%= image_tag @main_images.one.url, size: '650x439' %>
+      <p>bla</p>
+    </div>
+
+    <div class="slide">
+      <%= image_tag @main_images.two.url, size: '650x439' %>
+      <p>bla</p>
+    </div>
+
+
 </div>
 </div>
 
