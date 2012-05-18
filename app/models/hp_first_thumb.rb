@@ -1,5 +1,7 @@
 class HpFirstThumb < ActiveRecord::Base
-  attr_accessible :one, :two, :three, :four, :five, :six
+  attr_accessible :one, :two, :three, :four, :five, :six, :first_article_id,
+                  :second_article_id, :third_article_id, :fourth_article_id,
+                  :fifth_article_id, :sixth_article_id
   # FINAL SIZES: 143x143
 
   s3_host = 's3-eu-west-1.amazonaws.com'

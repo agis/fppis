@@ -1,6 +1,7 @@
 class HpMainImage < ActiveRecord::Base
-  attr_accessible :one, :two, :three, :four, :five, :six
-  # FINAL SIZE: 650x439
+  attr_accessible :one, :two, :three, :four, :five, :six, :first_article_id,
+                  :second_article_id, :third_article_id, :fourth_article_id,
+                  :fifth_article_id, :sixth_article_id
 
   s3_host = 's3-eu-west-1.amazonaws.com'
   s3_credentials = "#{Rails.root}/config/s3.yml"
@@ -36,6 +37,4 @@ class HpMainImage < ActiveRecord::Base
                       s3_host_name: s3_host
 end
 
-# TODO: add image validations when Corey sends me sizes
-# TODO: add Links for each image. 6 links will needed, :one_link, :two_link etc.
-# so add these fields, of integer
+# TODO: add image validations 650x439

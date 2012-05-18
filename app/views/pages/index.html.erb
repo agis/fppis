@@ -1,17 +1,12 @@
 <%# LATER: Make these rotate (javascript plugin) %>
 <div class="ninecol" id="left">
-  <%= image_tag @main_image.one.url %>
-  <%= image_tag @main_image.two.url %>
-  <%= image_tag @main_image.three.url %>
-  <%= image_tag @main_image.four.url %>
-  <%= image_tag @main_image.five.url %>
-  <%= image_tag @main_image.six.url %>
+  <%= main_img @main_images %>
 </div>
 
 <div class="threecol last" id="right">
 <div style="margin-left: 25px; line-height: 0">
-      <img src="<%= @first_thumb.one.url %>" style="margin-bottom:5px"/>
-      <img src="<%= @second_thumb.one.url %>" style="margin-bottom:5px"/>
-      <img src="<%= @third_thumb.one.url %>"/>
+  <%= thumb_img @first_thumbs %>
+  <%= thumb_img @second_thumbs %>
+  <%= thumb_img @third_thumbs %>
 </div>
 </div>

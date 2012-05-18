@@ -5,12 +5,42 @@ ActiveAdmin.register HpSecondThumb do
 
   form do |f|
     f.inputs "Images", :multipart => true do
-      f.input :one # TODO: add hints when Corey sends me exact sizes
-      f.input :two
-      f.input :three
-      f.input :four
-      f.input :five
-      f.input :six
+      f.input :one, label: '#1 Image', hint: '143x143'
+      f.input :first_article_id,
+              label: '#1 Link',
+              :as => :select,
+              :collection => Hash[Post.published.map{|b| [b.story_title,b.id]}]
+
+      f.input :two, label: '#2 Image'
+      f.input :second_article_id,
+              label: '#2 Link',
+              :as => :select,
+              :collection => Hash[Post.published.map{|b| [b.story_title,b.id]}]
+
+      f.input :three, label: '#3 Image'
+      f.input :third_article_id,
+              label: '#3 Link',
+              :as => :select,
+              :collection => Hash[Post.published.map{|b| [b.story_title,b.id]}]
+
+      f.input :four, label: '#4 Image'
+      f.input :fourth_article_id,
+              label: '#4 Link',
+              :as => :select,
+              :collection => Hash[Post.published.map{|b| [b.story_title,b.id]}]
+
+      f.input :five, label: '#5 Image'
+      f.input :fifth_article_id,
+              label: '#5 Link',
+              :as => :select,
+              :collection => Hash[Post.published.map{|b| [b.story_title,b.id]}]
+
+      f.input :six, label: '#6 Image'
+      f.input :sixth_article_id,
+              label: '#6 Link',
+              :as => :select,
+              :collection => Hash[Post.published.map{|b| [b.story_title,b.id]}]
+
       f.input :preview, :as => :second_thumb
     end
 

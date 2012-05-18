@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120516205427) do
+ActiveRecord::Schema.define(:version => 20120518005724) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -99,6 +99,12 @@ ActiveRecord::Schema.define(:version => 20120516205427) do
     t.datetime "six_updated_at"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.integer  "first_article_id"
+    t.integer  "second_article_id"
+    t.integer  "third_article_id"
+    t.integer  "fourth_article_id"
+    t.integer  "fifth_article_id"
+    t.integer  "sixth_article_id"
   end
 
   create_table "hp_main_images", :force => true do |t|
@@ -128,6 +134,12 @@ ActiveRecord::Schema.define(:version => 20120516205427) do
     t.datetime "six_updated_at"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.integer  "first_article_id"
+    t.integer  "second_article_id"
+    t.integer  "third_article_id"
+    t.integer  "fourth_article_id"
+    t.integer  "fifth_article_id"
+    t.integer  "sixth_article_id"
   end
 
   create_table "hp_second_thumbs", :force => true do |t|
@@ -157,6 +169,12 @@ ActiveRecord::Schema.define(:version => 20120516205427) do
     t.datetime "six_updated_at"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.integer  "first_article_id"
+    t.integer  "second_article_id"
+    t.integer  "third_article_id"
+    t.integer  "fourth_article_id"
+    t.integer  "fifth_article_id"
+    t.integer  "sixth_article_id"
   end
 
   create_table "hp_third_thumbs", :force => true do |t|
@@ -186,6 +204,12 @@ ActiveRecord::Schema.define(:version => 20120516205427) do
     t.datetime "six_updated_at"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.integer  "first_article_id"
+    t.integer  "second_article_id"
+    t.integer  "third_article_id"
+    t.integer  "fourth_article_id"
+    t.integer  "fifth_article_id"
+    t.integer  "sixth_article_id"
   end
 
   create_table "photographers", :force => true do |t|

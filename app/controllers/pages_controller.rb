@@ -1,10 +1,11 @@
 class PagesController < ApplicationController
 
   def index
-    @main_image = HpMainImage.first
-    @first_thumb = HpFirstThumb.first
-    @second_thumb = HpSecondThumb.first
-    @third_thumb = HpThirdThumb.first
+    @main_images = HpMainImage.first
+    @first_thumbs = HpFirstThumb.first
+    @second_thumbs = HpSecondThumb.first
+    @third_thumbs = HpThirdThumb.first
+
   end
 
   def who
