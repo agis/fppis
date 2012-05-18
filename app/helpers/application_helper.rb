@@ -1,6 +1,6 @@
 module ApplicationHelper
   def format_date(d)
-    raw d.strftime "%B %d, %Y"
+    d.strftime "%B %d, %Y".html_safe
   end
 
   def smart_truncate(s, opts = {})
@@ -13,6 +13,7 @@ module ApplicationHelper
     a[0...n].join(' ') + (a.size > n ? '...' : '')
   end
 
+  # FIXME: Fix this helper to render all images and links
   def main_img(image)
     if image.first_article_id.nil?
       image_tag image.one.url
@@ -25,10 +26,10 @@ module ApplicationHelper
 
   def thumb_img(image)
     if image.first_article_id.nil?
-      raw "<img src=\"#{image.one.url}\" style=\"margin-bottom: 5px;\" />"
+      "<img src=\"#{image.one.url}\" style=\"margin-bottom: 5px;\" />".html_safe
     else
       link_to post_path(image.first_article_id) do
-        raw "<img src=\"#{image.one.url}\" style=\"margin-bottom: 5px;\" />"
+        "<img src=\"#{image.one.url}\" style=\"margin-bottom: 5px;\" />".html_safe
       end
     end
   end

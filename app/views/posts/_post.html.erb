@@ -28,7 +28,9 @@
   <div class="twelvecol last">
     <% if controller.action_name == 'index' %>
       <%= raw smart_truncate(post.content, :words => 3) %>
-      <%= link_to 'Read More', post %>
+      <div class="row">
+        <%= link_to 'Read More', post %>
+      </div>
     <% else %>
       <%= raw post.content %>
     <% end %>

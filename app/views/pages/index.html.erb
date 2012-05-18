@@ -1,6 +1,13 @@
 <%# LATER: Make these rotate (javascript plugin) %>
 <div class="ninecol" id="left">
-  <%= main_img @main_images %>
+  <div class="slideshow">
+  <%= image_tag @main_images.one.url %>
+  <%= image_tag @main_images.two.url %>
+  <%= image_tag @main_images.three.url %>
+  <%= image_tag @main_images.four.url %>
+  <%= image_tag @main_images.five.url %>
+  <%= image_tag @main_images.six.url %>
+</div>
 </div>
 
 <div class="threecol last" id="right">
