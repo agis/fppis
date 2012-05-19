@@ -1,11 +1,11 @@
 class Post < ActiveRecord::Base
-  attr_accessible :content, :title,
-                  :category_id, :category_title,
+  attr_accessible :content,
+                  :category_id, :tag_list,
                   :story_title, :story_subtitle,
                   :author_id, :photographer_id,
                   :published, :publish_date,
-                  :tag_list, :country,
-                  :city
+                  :country, :city,
+                  :test_date
 
   belongs_to :category
   belongs_to :author
@@ -17,5 +17,12 @@ class Post < ActiveRecord::Base
 
   scope :published, where(:published => true).order("publish_date DESC")
 
-  # TODO: add validations
+  validates :category, :content, :tag_list, :country, :story_title, :author,
+            :presence => true
+
+
+  before_save do |post|
+    post.tag_list << post.country
+    post.tag_list << post.city unless post.city.blank?
+  end
 end
