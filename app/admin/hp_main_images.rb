@@ -5,7 +5,7 @@ ActiveAdmin.register HpMainImage do
 
   form do |f|
     f.inputs "Images", :multipart => true do
-      f.input :one, label: '#1 Image', hint: '650x439'
+      f.input :one, label: '#1 Image', hint: 'Must be 650x439'
       f.input :first_article_id,
               label: '#1 Link',
               :as => :select,

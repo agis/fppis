@@ -5,7 +5,7 @@ ActiveAdmin.register HpFirstThumb do
 
   form do |f|
     f.inputs "Images", :multipart => true do
-      f.input :one, label: '#1 Image', hint: '143x143'
+      f.input :one, label: '#1 Image', hint: 'Must be 143x143'
       f.input :first_article_id,
               label: '#1 Link',
               :as => :select,

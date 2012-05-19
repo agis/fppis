@@ -1,6 +1,9 @@
 # TODO: Add preview functionality
 ActiveAdmin.register Post do
+  actions :all, :except => [:show]
+
   menu :priority => 2
+
   form do |f|
     f.inputs "Details", :multipart => true do
       f.input :category
@@ -26,5 +29,20 @@ ActiveAdmin.register Post do
     end
 
     f.buttons
+  end
+
+  index do
+    column "ID" do |post|
+      link_to post.id, edit_admin_post_path(post)
+    end
+    column :country
+    column :city
+    column :story_title
+    column :story_subtitle
+    column :author
+    column :publish_date
+    column :published
+
+    default_actions
   end
 end
