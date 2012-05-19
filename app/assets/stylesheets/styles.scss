@@ -17,7 +17,6 @@ body {
 
 div#logo {
   margin-bottom: 20px;
-  line-height: 4em;
 
   .header { font-size: 60px; }
   .subheader { font-size: 16px; position:relative; top: 0.5em;}
@@ -51,8 +50,6 @@ div#main { width: 895px; }
 
 
 div#content {
-  line-height: 2em;
-
   #left {
     width: 650px;
     margin-right: 0;
@@ -65,10 +62,9 @@ div#content {
 
   #post-details {
     min-height:100px;
-    line-height: 45px;
-    .title-label { color: $red; }
+    .onecol { margin-right: 35px; }
     .subtitle { font-size: 20px; }
-    .date { font-size:17px; }
+    .date { font-size:15px; line-height: 0; }
     .row { font-size: 25px; }
   }
 
@@ -80,16 +76,28 @@ div#content {
   }
 
   #post-menu {
-    margin: 205px 55px 0 0;
+    margin: 195px 85px 0 0;
     text-align: right;
     h3 { color: $red; }
+  }
+
+  #post-credits {
+    .tags {
+      margin: 25px 0 50px 0;
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+
+    .credits {
+      text-align: center;
+      font-size: 18px;
+    }
   }
 }
 
 div#footer {
   text-align: center;
-  font-size: 15px;
-  margin-top: 50px;
+  font-size: 14px;
 }
 
 @font-face {
@@ -106,23 +114,14 @@ h1 { font-size: 30px;}
 
 hr {
   border: none;
-  border-top: 1px solid #ddd;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  border-top: 1px solid $red;
+  margin: 25px 0;
   height: 0;
 }
 
 .slide { height: 450px;}
 
-
-
-
-
-
-
-
-
-
+span.red { color: $red; }
 
 
 

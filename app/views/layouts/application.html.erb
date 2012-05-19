@@ -3,6 +3,7 @@
 <head>
   <title>FPPIS</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag    'posts', media: 'all' if controller_name == 'posts' && action_name == 'show' %>
   <%= javascript_include_tag 'application' %>
   <%= javascript_include_tag 'jquery.cycle.all.js' %>
 
@@ -10,7 +11,7 @@
   <script type="text/javascript">
   $(document).ready(function() {
       $('.slideshow').cycle({
-      fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+      fx: 'fade'
     });
   });
   </script>
@@ -18,7 +19,6 @@
 <body>
 
 <div class="container">
-
   <div class="row">
     <div class="twocol" id="menu">
       <%= render 'shared/menu' %>
@@ -36,7 +36,6 @@
       </div>
     </div>
   </div>
-
 </div>
 
 </body>
