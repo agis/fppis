@@ -1,8 +1,4 @@
 <div id="post-details">
-  <div class="twelvecol last">
-    <hr style="margin-top:0" />
-  </div>
-
   <div class="row" style="margin-bottom: 5px">
     <div class="onecol">
       <span class="red"><%= post.category.title.singularize %></span>
@@ -32,7 +28,7 @@
 <div id="post-body">
   <div class="twelvecol last">
     <% if controller.action_name == 'index' %>
-      <%= raw smart_truncate(post.content, :words => 3) %>
+      <%= raw post.content %>
       <div class="row">
         <%= link_to 'Read More', post %>
       </div>
@@ -49,7 +45,7 @@
       <% post.tags.each do |tag| %>
       <%= link_to tag.name, posts_path(:tag => tag.name) %>
       <% end %>
-  </div>
+    </div>
   </div>
 
   <div class="credits">

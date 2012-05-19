@@ -16,8 +16,6 @@ body {
 .container { margin-top: 30px; }
 
 div#logo {
-  margin-bottom: 20px;
-
   .header { font-size: 60px; }
   .subheader { font-size: 16px; position:relative; top: 0.5em;}
   a:hover { color: $red; }
@@ -48,17 +46,23 @@ div#menu {
 
 div#main { width: 895px; }
 
+div#left {
+  width: 650px;
+  margin-right: 0;
+}
+
+div#right {
+  width: 245px;
+  margin: 0;
+}
+
+div#post-menu {
+  margin: 220px 85px 0 0;
+  text-align: right;
+  h3 { color: $red; }
+}
 
 div#content {
-  #left {
-    width: 650px;
-    margin-right: 0;
-  }
-
-  #right {
-    width: 245px;
-    margin: 0;
-  }
 
   #post-details {
     min-height:100px;
@@ -73,12 +77,6 @@ div#content {
     p { margin: 10px 0; }
     img.left { margin-right: 10px; }
     img.right { margin-left: 10px; }
-  }
-
-  #post-menu {
-    margin: 195px 85px 0 0;
-    text-align: right;
-    h3 { color: $red; }
   }
 
   #post-credits {
