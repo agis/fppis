@@ -1,25 +1,30 @@
 <div id="post-details">
-  <div class="row">
-    <div class="twocol">
-      <h1 class="title-label"><%= post.category.title.singularize %></h1>
+  <div class="twelvecol last">
+    <hr style="margin-top:0" />
+  </div>
+
+  <div class="row" style="margin-bottom: 5px">
+    <div class="onecol">
+      <span class="red"><%= post.category.title.singularize %></span>
     </div>
-    <%= post.category_title %>
+    <%= post.country %>
+    <%= " : " + post.city unless post.city.blank? %>
   </div>
 
   <div class="row">
-    <div class="twocol">
-      <h1 class="title-label">Story</h1>
+    <div class="onecol">
+      <span class="red">Story</span>
     </div>
     <%= post.story_title %>
   </div>
 
   <div class="row">
-    <div class="twocol"></div>
+    <div class="onecol"></div>
     <div class="subtitle"><%= post.story_subtitle %></div>
   </div>
 
   <div class="row">
-    <div class="twocol"></div>
+    <div class="onecol"></div>
     <span class="date"><%= format_date(post.publish_date) %></span>
   </div>
 </div>
@@ -39,19 +44,29 @@
 
 <div id="post-credits">
   <div class="twelvecol last">
-    Story by <%= post.author.name %><br />
-    Images by <%= post.photographer.name %>
+    <div class="tags">
+      Tags:
+      <% post.tags.each do |tag| %>
+      <%= link_to tag.name, posts_path(:tag => tag.name) %>
+      <% end %>
+  </div>
   </div>
 
-  <div class="twelvecol last">
-    Tags:
-    <% post.tags.each do |tag| %>
-    <%= link_to tag.name, posts_path(:tag => tag.name) %>
-    <% end %>
+  <div class="credits">
+    <div class="fourcol">
+      <span class="red">Story</span> by <%= post.author.name %>
+    </div>
+
+    <div class="fourcol">
+      <span class="red">Images</span> by <%= post.photographer.name %>
+    </div>
+
+    <div class="fourcol last">
+      corey@fppis.com
+    </div>
   </div>
 
   <div class="twelvecol last">
     <hr />
   </div>
 </div>
-
