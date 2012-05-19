@@ -5,10 +5,11 @@ gem 'sqlite3'
 gem 'jquery-rails'
 
 gem 'activeadmin'
-gem 'ckeditor', '3.7.0.rc3'
+gem 'ckeditor', '3.7.1'
 gem 'paperclip'
 gem 'acts-as-taggable-on', '~> 2.2.2'
 gem 'country-select'
+gem 'ui_datepicker-rails3'
 
 gem 'thin'
 
