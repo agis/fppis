@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120519150609) do
+ActiveRecord::Schema.define(:version => 20120519153628) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -223,7 +223,6 @@ ActiveRecord::Schema.define(:version => 20120519150609) do
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
     t.integer  "category_id"
-    t.string   "category_title"
     t.string   "story_title"
     t.string   "story_subtitle"
     t.integer  "author_id"
@@ -232,7 +231,6 @@ ActiveRecord::Schema.define(:version => 20120519150609) do
     t.date     "publish_date"
     t.string   "country"
     t.string   "city"
-    t.date     "test_date"
   end
 
   create_table "taggings", :force => true do |t|
