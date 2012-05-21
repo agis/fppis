@@ -1,8 +1,7 @@
 class Author < ActiveRecord::Base
   attr_accessible :name
 
-  # TODO: add more validations for presence, length etc
-  validates :name, :uniqueness => true
+  validates :name, uniqueness: true, presence: true, length: { minimum: 4 }
 
   has_many :posts
 end

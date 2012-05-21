@@ -17,7 +17,7 @@ class Post < ActiveRecord::Base
 
   scope :published, where(:published => true).order("publish_date DESC")
 
-  validates :category, :content, :tag_list, :country, :story_title, :author,
+  validates :category, :content, :country, :story_title, :author,
             :presence => true
 
 

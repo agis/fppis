@@ -39,15 +39,6 @@
 </div>
 
 <div id="post-credits">
-  <div class="twelvecol last">
-    <div class="tags">
-      Tags:
-      <% post.tags.each do |tag| %>
-      <%= link_to tag.name, posts_path(:tag => tag.name) %>
-      <% end %>
-    </div>
-  </div>
-
   <div class="credits">
     <div class="fourcol">
       <span class="red">Story</span> by <%= post.author.name %>
@@ -59,6 +50,15 @@
 
     <div class="fourcol last">
       corey@fppis.com
+    </div>
+  </div>
+
+  <div class="twelvecol last">
+    <div class="tags">
+      Tags:
+      <% post.tags.each do |tag| %>
+      <%= link_to tag.name, posts_path(:tag => tag.name) %>
+      <% end %>
     </div>
   </div>
 

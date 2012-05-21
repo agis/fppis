@@ -1,18 +1,37 @@
 <%# LATER: Make these rotate (javascript plugin) %>
 <div class="ninecol" id="left">
   <div class="slideshow">
-    <div class="slide">
-      <%= image_tag @main_images.one.url, size: '650x439' %>
-      <p>bla</p>
+    <%= link_to @first_link do %>
+    <%= image_tag @main_images.one.url, size: '650x439' %>
+    <% end %>
+
+    <%= link_to @second_link do %>
+    <%= image_tag @main_images.one.url, size: '650x439' %>
+    <% end %>
+  </div>
+
+  <div class="slideshow" id="titles">
+    <div>
+      <%= image_tag 'star.png' %>
+      <span class="red">Place</span>
+      <%= @first_link.country %> <%= @first_link.city %>
+
+      <%= image_tag 'star.png', style: 'margin-left: 20px'%>
+      <span class="red">Story</span>
+      <%= @first_link.story_title %>  <%= @first_link.story_subtitle %>
     </div>
 
-    <div class="slide">
-      <%= image_tag @main_images.two.url, size: '650x439' %>
-      <p>bla</p>
+    <div>
+      <%= image_tag 'star.png' %>
+      <span class="red">Place</span>
+      <%= @second_link.country %> <%= @second_link.city %>
+
+      <%= image_tag 'star.png', style: 'margin-left: 20px'%>
+      <span class="red">Story</span>
+      <%= @second_link.story_title %>  <%= @second_link.story_subtitle %>
     </div>
 
-
-</div>
+  </div>
 </div>
 
 <div class="threecol last" id="right">
