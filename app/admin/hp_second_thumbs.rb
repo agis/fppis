@@ -49,27 +49,27 @@ ActiveAdmin.register HpSecondThumb do
 
     index do
     column "Image #1" do |main_image|
-      image_tag main_image.one.url(:thumb)
+      image_tag main_image.one.url
     end
 
     column "Image #2" do |main_image|
-      image_tag main_image.two.url(:thumb)
+      image_tag main_image.two.url
     end
 
     column "Image #3" do |main_image|
-      image_tag main_image.three.url(:thumb)
+      image_tag main_image.three.url
     end
 
     column "Image #4" do |main_image|
-      image_tag main_image.four.url(:thumb)
+      image_tag main_image.four.url
     end
 
     column "Image #5" do |main_image|
-      image_tag main_image.five.url(:thumb)
+      image_tag main_image.five.url
     end
 
     column "Image #6" do |main_image|
-      image_tag main_image.six.url(:thumb)
+      image_tag main_image.six.url
     end
   end
 

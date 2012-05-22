@@ -1,0 +1,15 @@
+<div>
+  <%= link_to main_slide do %>
+  <%= slide_image(main_slide_counter) %>
+  <% end %>
+
+  <div class="slide-title">
+    <%= image_tag 'star.png' %>
+    <span class="red">Place</span>
+    <%= slide_title(main_slide) %>
+
+    <%= image_tag 'star.png', style: 'margin-left: 20px'%>
+    <span class="red">Story</span>
+    <%= slide_category_title(main_slide) %>
+  </div>
+</div>

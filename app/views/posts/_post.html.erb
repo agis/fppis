@@ -1,27 +1,21 @@
 <div id="post-details">
-  <div class="row" style="margin-bottom: 5px">
-    <div class="onecol">
-      <span class="red"><%= post.category.title.singularize %></span>
+  <div class="row">
+    <div style="float:left; width:80%">
+      <div class="title"><%= post.category.title.singularize %></div>
+      <%= post.country %>
+      <%= " : " + post.city unless post.city.blank? %>
     </div>
-    <%= post.country %>
-    <%= " : " + post.city unless post.city.blank? %>
+    <div class="date"><%= format_date(post.publish_date) %></div>
   </div>
 
   <div class="row">
-    <div class="onecol">
-      <span class="red">Story</span>
-    </div>
+    <div class="title">Story</div>
     <%= post.story_title %>
   </div>
 
   <div class="row">
     <div class="onecol"></div>
     <div class="subtitle"><%= post.story_subtitle %></div>
-  </div>
-
-  <div class="row">
-    <div class="onecol"></div>
-    <span class="date"><%= format_date(post.publish_date) %></span>
   </div>
 </div>
 

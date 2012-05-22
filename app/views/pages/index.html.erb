@@ -1,43 +1,25 @@
-<%# LATER: Make these rotate (javascript plugin) %>
 <div class="ninecol" id="left">
-  <div class="slideshow">
-    <%= link_to @first_link do %>
-    <%= image_tag @main_images.one.url, size: '650x439' %>
-    <% end %>
-
-    <%= link_to @second_link do %>
-    <%= image_tag @main_images.one.url, size: '650x439' %>
-    <% end %>
-  </div>
-
-  <div class="slideshow" id="titles">
-    <div>
-      <%= image_tag 'star.png' %>
-      <span class="red">Place</span>
-      <%= @first_link.country %> <%= @first_link.city %>
-
-      <%= image_tag 'star.png', style: 'margin-left: 20px'%>
-      <span class="red">Story</span>
-      <%= @first_link.story_title %>  <%= @first_link.story_subtitle %>
-    </div>
-
-    <div>
-      <%= image_tag 'star.png' %>
-      <span class="red">Place</span>
-      <%= @second_link.country %> <%= @second_link.city %>
-
-      <%= image_tag 'star.png', style: 'margin-left: 20px'%>
-      <span class="red">Story</span>
-      <%= @second_link.story_title %>  <%= @second_link.story_subtitle %>
-    </div>
-
+  <div class="slideshow" id="home-slide">
+    <%= render partial: 'main_slide', collection: @main_posts %>
   </div>
 </div>
 
 <div class="threecol last" id="right">
-<div style="margin-left: 25px; line-height: 0">
-  <%= thumb_img @first_thumbs %>
-  <%= thumb_img @second_thumbs %>
-  <%= thumb_img @third_thumbs %>
+<div style="margin-left: 25px;">
+  <div class="slideshow" style="margin-bottom:5px;">
+    <%= image_tag @first_thumbs.one.url %>
+    <%= image_tag @first_thumbs.two.url %>
+    <%= image_tag @first_thumbs.three.url %>
+  </div>
+  <div class="slideshow" style="margin-bottom:5px;">
+    <%= image_tag @second_thumbs.one.url %>
+    <%= image_tag @second_thumbs.two.url %>
+    <%= image_tag @second_thumbs.three.url %>
+  </div>
+  <div class="slideshow">
+    <%= image_tag @third_thumbs.one.url %>
+    <%= image_tag @third_thumbs.two.url %>
+    <%= image_tag @third_thumbs.three.url %>
+  </div>
 </div>
 </div>

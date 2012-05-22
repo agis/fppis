@@ -1,0 +1,19 @@
+$hr-margintop: 10px;
+$hr-marginbottom: 16px;
+$red: #F93E45;
+
+div#menu { margin-top: 327px + $hr-margintop + $hr-marginbottom; }
+
+div#post-menu {
+  margin: 164px 122px 0 0;
+  text-align: right;
+  h3 { color: $red; }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $red;
+  margin-top: $hr-margintop;
+  margin-bottom: $hr-marginbottom;
+  height: 0;
+}

@@ -49,28 +49,28 @@ ActiveAdmin.register HpFirstThumb do
   end
 
     index do
-    column "Image #1" do |main_image|
-      image_tag main_image.one.url(:thumb)
+    column "Image #1" do |first_thumb|
+      image_tag first_thumb.one.url
     end
 
-    column "Image #2" do |main_image|
-      image_tag main_image.two.url(:thumb)
+    column "Image #2" do |first_thumb|
+      image_tag first_thumb.two.url
     end
 
-    column "Image #3" do |main_image|
-      image_tag main_image.three.url(:thumb)
+    column "Image #3" do |first_thumb|
+      image_tag first_thumb.three.url
     end
 
-    column "Image #4" do |main_image|
-      image_tag main_image.four.url(:thumb)
+    column "Image #4" do |first_thumb|
+      image_tag first_thumb.four.url
     end
 
-    column "Image #5" do |main_image|
-      image_tag main_image.five.url(:thumb)
+    column "Image #5" do |first_thumb|
+      image_tag first_thumb.five.url
     end
 
-    column "Image #6" do |main_image|
-      image_tag main_image.six.url(:thumb)
+    column "Image #6" do |first_thumb|
+      image_tag first_thumb.six.url
     end
   end
 
