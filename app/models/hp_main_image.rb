@@ -11,8 +11,6 @@ class HpMainImage < ActiveRecord::Base
   has_attached_file :four,  style
   has_attached_file :five,  style
   has_attached_file :six,   style
-
-  validates_attachment :one, :presence => true
 end
 
 # TODO: add image validations 650x439

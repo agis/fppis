@@ -9,6 +9,4 @@ class HpSecondThumb < ActiveRecord::Base
   has_attached_file :four
   has_attached_file :five
   has_attached_file :six
-
-  validates_attachment :one, :presence => true
 end

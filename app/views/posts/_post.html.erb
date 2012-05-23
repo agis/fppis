@@ -23,10 +23,8 @@
   <div class="twelvecol last" <%= raw "style=\"margin-top:10px;\"" if controller.action_name == 'index' %>>
     <% if controller.action_name == 'index' %>
       <%= preview_image(post.content) %>
-      <%= preview_content(post.content, 30) %>
-      <div class="row" style="margin-top:10px">
-        <%= link_to 'Read More', post %>
-      </div>
+      <%= preview_content(post.content, 50) %>
+      <%= link_to 'Read More', post, class: 'readmore' %>
     <% else %>
       <%= raw post.content %>
     <% end %>

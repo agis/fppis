@@ -5,6 +5,8 @@ ActiveAdmin.register HpMainImage do
 
   form do |f|
     f.inputs "Images", :multipart => true do
+      f.input :rotate_delay, label: 'Rotate Delay (in milliseconds)', hint: 'Hint: can be negative'
+
       f.input :one, label: '#1 Image', hint: 'Must be 650x439'
       f.input :first_article_id,
               label: '#1 Link',
@@ -42,9 +44,6 @@ ActiveAdmin.register HpMainImage do
               :collection => Hash[Post.published.map{|b| [b.story_title,b.id]}]
 
       f.input :all_images, :as => :preview
-
-      f.input :rotate_delay, label: 'Rotate Delay (in milliseconds)', hint: 'Hint: can be negative'
-
     end
 
     f.buttons
