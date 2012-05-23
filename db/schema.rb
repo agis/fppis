@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120519153628) do
+ActiveRecord::Schema.define(:version => 20120523091655) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -140,6 +140,7 @@ ActiveRecord::Schema.define(:version => 20120519153628) do
     t.integer  "fourth_article_id"
     t.integer  "fifth_article_id"
     t.integer  "sixth_article_id"
+    t.integer  "rotate_delay"
   end
 
   create_table "hp_second_thumbs", :force => true do |t|

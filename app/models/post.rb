@@ -11,7 +11,7 @@ class Post < ActiveRecord::Base
   belongs_to :author
   belongs_to :photographer
 
-  paginates_per 3
+  paginates_per 2
 
   acts_as_taggable
 

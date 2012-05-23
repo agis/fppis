@@ -5,10 +5,16 @@ $red: #F93E45;
 div#menu { margin-top: 327px + $hr-margintop + $hr-marginbottom; }
 
 div#post-menu {
-  margin: 164px 122px 0 0;
+  margin: 213px 122px 0 0;
   text-align: right;
-  h3 { color: $red; }
+  font-size: 17px;
+  line-height: 24px;
+  li { list-style-type: none; }
+  a { text-decoration: none; }
+  h3 { color: $red; font-size: 19px; }
 }
+
+div#footer { margin-top: -10px; }
 
 hr {
   border: none;
@@ -17,3 +23,6 @@ hr {
   margin-bottom: $hr-marginbottom;
   height: 0;
 }
+
+#pagination { margin-top: 10px;}
+nav.pagination {margin-top:-20px; background:white;}

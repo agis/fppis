@@ -1,7 +1,7 @@
 class HpMainImage < ActiveRecord::Base
   attr_accessible :one, :two, :three, :four, :five, :six, :first_article_id,
                   :second_article_id, :third_article_id, :fourth_article_id,
-                  :fifth_article_id, :sixth_article_id
+                  :fifth_article_id, :sixth_article_id, :rotate_delay
 
   style = { :styles => { :thumb => '258x174'} }
 

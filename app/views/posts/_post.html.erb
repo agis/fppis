@@ -20,10 +20,11 @@
 </div>
 
 <div id="post-body">
-  <div class="twelvecol last">
+  <div class="twelvecol last" <%= raw "style=\"margin-top:10px;\"" if controller.action_name == 'index' %>>
     <% if controller.action_name == 'index' %>
-      <%= raw post.content %>
-      <div class="row">
+      <%= preview_image(post.content) %>
+      <%= preview_content(post.content, 30) %>
+      <div class="row" style="margin-top:10px">
         <%= link_to 'Read More', post %>
       </div>
     <% else %>
@@ -49,7 +50,7 @@
 
   <div class="twelvecol last">
     <div class="tags">
-      Tags:
+      <span class="red">Tags:</span>
       <% post.tags.each do |tag| %>
       <%= link_to tag.name, posts_path(:tag => tag.name) %>
       <% end %>

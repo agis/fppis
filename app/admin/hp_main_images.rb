@@ -43,6 +43,8 @@ ActiveAdmin.register HpMainImage do
 
       f.input :all_images, :as => :preview
 
+      f.input :rotate_delay, label: 'Rotate Delay (in milliseconds)', hint: 'Hint: can be negative'
+
     end
 
     f.buttons

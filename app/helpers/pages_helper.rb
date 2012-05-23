@@ -7,20 +7,20 @@ module PagesHelper
     "#{link.story_title} #{link.story_subtitle}"
   end
 
-  def slide_image(counter)
+  def slide_image(counter, object, size = '143x143')
     case counter
     when 0
-      image_tag @main_images.one.url, size: '650x439'
+      image_tag object.one.url, size: size
     when 1
-      image_tag @main_images.two.url, size: '650x439'
+      image_tag object.two.url, size: size
     when 2
-      image_tag @main_images.three.url, size: '650x439'
+      image_tag object.three.url, size: size
     when 3
-      image_tag @main_images.four.url, size: '650x439'
+      image_tag object.four.url, size: size
     when 4
-      image_tag @main_images.five.url, size: '650x439'
+      image_tag object.five.url, size: size
     when 5
-      image_tag @main_images.six.url, size: '650x439'
+      image_tag object.six.url, size: size
     end
   end
 end

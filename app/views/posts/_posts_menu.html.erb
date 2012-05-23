@@ -1,13 +1,14 @@
 <div id="post-menu">
   <h3>Categories</h3>
+  <ul>
   <% Category.all.each do |category| %>
-  <h2>
-    <%= link_to category.title, posts_path(:c => category.id) %>
-  </h2>
+    <li>
+      <%= link_to category.title, posts_path(:c => category.id) %>
+    </li>
   <% end %>
+  </ul>
 
   <br />
-
   <%# LATER: Implement Month menu %>
   <h3>Archive</h3>
   June<br />

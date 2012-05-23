@@ -2,7 +2,7 @@ ActiveAdmin.register HpFirstThumb do
   menu :parent => "Homepage", :label => 'Thumb #1 Area'
   config.clear_sidebar_sections!
   actions :all, :except => [:new, :destroy]
-
+  # OPTIMIZE: Latest posts should be on top (for the article dropdown lists)
   form do |f|
     f.inputs "Images", :multipart => true do
       f.input :one, label: '#1 Image', hint: 'Must be 143x143'

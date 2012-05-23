@@ -6,20 +6,14 @@
 
 <div class="threecol last" id="right">
 <div style="margin-left: 25px;">
-  <div class="slideshow" style="margin-bottom:5px;">
-    <%= image_tag @first_thumbs.one.url %>
-    <%= image_tag @first_thumbs.two.url %>
-    <%= image_tag @first_thumbs.three.url %>
+  <div class="thumb-slideshow" style="margin-bottom:5px; height: 143px;">
+    <%= render partial: 'thumb_slide', collection: @first_posts, locals: { thumbs: @first_thumbs} %>
   </div>
-  <div class="slideshow" style="margin-bottom:5px;">
-    <%= image_tag @second_thumbs.one.url %>
-    <%= image_tag @second_thumbs.two.url %>
-    <%= image_tag @second_thumbs.three.url %>
+  <div class="thumb-slideshow" style="margin-bottom:5px; height: 143px;">
+    <%= render partial: 'thumb_slide', collection: @second_posts, locals: { thumbs: @second_thumbs} %>
   </div>
-  <div class="slideshow">
-    <%= image_tag @third_thumbs.one.url %>
-    <%= image_tag @third_thumbs.two.url %>
-    <%= image_tag @third_thumbs.three.url %>
+  <div class="thumb-slideshow" style="margin-bottom:5px; height: 143px;">
+    <%= render partial: 'thumb_slide', collection: @third_posts, locals: { thumbs: @third_thumbs} %>
   </div>
 </div>
 </div>
