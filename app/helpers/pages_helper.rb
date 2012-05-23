@@ -4,7 +4,7 @@ module PagesHelper
   end
 
   def slide_category_title(link)
-    "#{link.story_title} #{link.story_subtitle}"
+    raw "#{link.story_title} <span class=\"slide-subtitle\">#{link.story_subtitle}</span>"
   end
 
   def slide_image(counter, object, size = '143x143')

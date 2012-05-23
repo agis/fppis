@@ -1,0 +1,10 @@
+<div id="post-menu">
+  <h3>Categories</h3>
+  <ul>
+  <% Category.all.each do |category| %>
+    <li>
+      <%= link_to category.title, posts_path(:c => category.id) %>
+    </li>
+  <% end %>
+  </ul>
+</div>

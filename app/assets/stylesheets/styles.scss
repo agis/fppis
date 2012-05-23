@@ -1,4 +1,4 @@
-$grey: #4D4D4D;
+$grey: #000;
 $red: #F93E45;
 
 @mixin er {
@@ -10,6 +10,7 @@ body {
   font-family: SkarpaLt, Helvetica, Arial, sans-serif;
   color: $grey;
   line-height: 2em;
+  letter-spacing: -1px;
 }
 
 a { color: $grey; }
@@ -31,11 +32,11 @@ div#logo {
 div#menu {
   width: 245px;
   margin-right: 0;
-  margin-top: 250px;
+  margin-top: 270px;
   font-size: 25px;
   text-transform: uppercase;
   text-align: center;
-  line-height: 50px;
+
 
   li { list-style-type: none; }
   a:hover { color: $red; }
@@ -48,6 +49,16 @@ div#menu {
 
 div#main { width: 895px; }
 
+div#post-menu {
+  margin: 100px 122px 0 0;
+  text-align: right;
+  font-size: 15px;
+  line-height: 24px;
+  li { list-style-type: none; }
+  a { text-decoration: none; }
+  h3 { color: $red; font-size: 16px; }
+}
+
 div#left {
   width: 650px;
   margin-right: 0;
@@ -58,42 +69,10 @@ div#right {
   margin: 0;
 }
 
-div#content {
-
-  #post-details {
-    min-height:100px;
-    font-size: 25px;
-    .onecol { margin-right: 35px; }
-    .subtitle { font-size: 20px; }
-    .date { font-size:15px; float:right; }
-    .title { float:left; width: 65px; color: $red;}
-  }
-
-  #post-body {
-    line-height: 19px;
-    p { margin: 10px 0; }
-    img.left { margin-right: 10px; }
-    img.right { margin-left: 10px; }
-  }
-
-  #post-credits {
-    .credits {
-      text-align: center;
-      font-size: 17px;
-      .fourcol { margin-top: 15px; }
-    }
-
-    .tags {
-      margin: 25px 0;
-      border: 1px solid #ccc;
-      padding: 5px;
-    }
-  }
-}
 
 div#footer {
   text-align: center;
-  font-size: 14px;
+  font-size: 11px;
   margin-top: 20px;
 }
 
@@ -101,17 +80,18 @@ div#footer {
   font-family: SkarpaLt;
     src: url('font/SkarpaLt.eot');
     src: url('font/SkarpaLt.eot?iefix') format('eot'),
-         url('font/SkarpaLt.otf') format('opentype'),
+         url('font/Quicksand_Book.otf') format('opentype'),
          url('font/SkarpaLt.ttf') format('truetype'),
          url('font/SkarpaLt.svg') format('svg'),
          url('font/SkarpaLt.woff') format('woff');
 }
 
-
-
-.slide { height: 450px; }
 span.red { color: $red; }
-h1 { font-size: 30px; }
+
+h1 {
+  font-size: 30px;
+  color: $red;
+}
 
 #titles {
   margin-top: 415px;
@@ -120,9 +100,14 @@ h1 { font-size: 30px; }
 
 div#home-slide {
   height: 490px;
+
   .slide-title {
     margin-top:-11px;
-    font-size:18px
+    font-size:16px
+  }
+
+  .slide-subtitle {
+    margin-left: 5px;
   }
 }
 
