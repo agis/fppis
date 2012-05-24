@@ -21,12 +21,6 @@ div#logo {
   margin-bottom: 15px;
   .header { font-size: 60px; }
   .subheader { font-size: 16px; position:relative; top: 0.5em;}
-  a:hover { color: $red; }
-
-  a {
-    color: $grey;
-    text-decoration:none;
-  }
 }
 
 div#menu {
@@ -36,15 +30,12 @@ div#menu {
   font-size: 25px;
   text-transform: uppercase;
   text-align: center;
-
-
   li { list-style-type: none; }
-  a:hover { color: $red; }
-
   a {
     color: $grey;
     text-decoration: none;
   }
+  a:hover { color: $red; }
 }
 
 div#main { width: 895px; }

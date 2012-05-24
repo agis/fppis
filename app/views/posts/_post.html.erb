@@ -1,5 +1,5 @@
 <div id="post-details">
-  <div class="row">
+  <div class="twelvecol last">
     <div style="float:left; width:80%">
       <%# FIXME: Fix the spacing for all post categories %>
       <div class="title"><%= post.category.title %></div>
@@ -9,15 +9,16 @@
     <div class="date"><%= format_date(post.publish_date) %></div>
   </div>
 
-  <div class="row" style="margin-bottom:-5px;">
+  <div class="twelvecol last">
     <div class="title">Story</div>
     <%= post.story_title %>
   </div>
 
-  <div class="row">
+  <div class="twelvecol last">
     <div class="onecol"></div>
     <div class="subtitle"><%= post.story_subtitle %></div>
   </div>
+
 </div>
 
 <div id="post-body">
@@ -54,7 +55,13 @@
       <%= link_to tag.name, posts_path(:tag => tag.name) %>
       <% end %>
     </div>
+    <div style="text-align:right; font-size: 13px;">
+      <%# OPTIMIZE: Add print stylesheet %>
+      <%= link_to_function "Print this post", "javascript:print()" %>
+    </div>
   </div>
+
+  <%= render 'disqus' if controller.action_name == 'show' %>
 
   <div class="twelvecol last">
     <hr />
