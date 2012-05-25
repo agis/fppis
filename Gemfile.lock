@@ -179,6 +179,7 @@ GEM
     uuidtools (2.1.2)
     warden (1.1.1)
       rack (>= 1.0)
+    wicked_pdf (0.7.9)
     xml-simple (1.1.1)
 
 PLATFORMS
@@ -203,3 +204,4 @@ DEPENDENCIES
   thin
   uglifier (>= 1.0.3)
   ui_datepicker-rails3
+  wicked_pdf

@@ -4,7 +4,12 @@ Fppis::Application.routes.draw do
   match '/who'      =>  'Pages#who'
   match '/contact'  =>  'Pages#contact'
 
-  resources :posts
+  match '/more_fppis' => 'Pages#more_fppis'
+  match '/terms'    =>  'Pages#terms'
+  match '/policy'   =>  'Pages#policy'
+  match '/sitemap'  =>  'Pages#sitemap'
+
+  resources :posts, only: [:index, :show]
 
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config

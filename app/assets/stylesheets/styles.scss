@@ -66,6 +66,7 @@ div#footer {
   text-align: center;
   font-size: 11px;
   margin-top: 20px;
+  a { text-decoration: none; }
 }
 
 @font-face {
@@ -107,6 +108,12 @@ div#home-slide {
 
 .floatright {float:right;}
 .floatleft {float:left;}
+
+hr {
+  border: none;
+  border-top: 1px solid $red;
+  height: 0;
+}
 
 /* ============================= */
 /* ! Layout for mobile version   */

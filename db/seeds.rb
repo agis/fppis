@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 AdminUser.create email: 'admin@example.com', password: 'password', password_confirmation: 'password'
+AdminUser.create email: 'corey@golferholics.com', password: 'corey', password_confirmation: 'corey'
 
 HpMainImage.create! if HpMainImage.count == 0
 HpFirstThumb.create! if HpFirstThumb.count == 0

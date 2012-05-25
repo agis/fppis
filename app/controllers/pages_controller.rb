@@ -45,4 +45,15 @@ class PagesController < ApplicationController
   def contact
   end
 
+  def more_fppis
+  end
+
+  def terms
+  end
+
+  def policy
+  end
+
+  def sitemap
+  end
 end
