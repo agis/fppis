@@ -9,7 +9,10 @@ Fppis::Application.routes.draw do
   match '/policy'   =>  'Pages#policy'
   match '/sitemap'  =>  'Pages#sitemap'
 
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show] do
+    resources :comments, only: [:create]
+  end
+
 
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config

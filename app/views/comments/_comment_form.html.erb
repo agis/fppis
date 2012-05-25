@@ -1,0 +1,19 @@
+<div class="twelvecol last" id="comment-form">
+  <h3>Post a comment</h3>
+  <%= form_for [@post, @comment] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, size: 40 %>
+  <br />
+  <%= f.label 'Country / City' %>
+  <%= f.text_field :country, size: 40 %>
+  <br />
+  <%= f.label :email %>
+  <%= f.text_field :email, size: 40 %>
+  <br />
+  <%= f.label :comment %>
+  <%= f.text_area :content, size: '30x6' %>
+  <br />
+  <%= f.submit "Post Comment" %>
+  <% end %>
+  <hr />
+</div>

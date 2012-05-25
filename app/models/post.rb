@@ -4,12 +4,12 @@ class Post < ActiveRecord::Base
                   :story_title, :story_subtitle,
                   :author_id, :photographer_id,
                   :published, :publish_date,
-                  :country, :city,
-                  :test_date
+                  :country, :city
 
   belongs_to :category
   belongs_to :author
   belongs_to :photographer
+  has_many :comments
 
   paginates_per 2
 

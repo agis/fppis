@@ -8,11 +8,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    respond_to do |format|
-      format.html
-      format.pdf do
-        render :pdf => "file_name"
-      end
-    end
+    @comments = @post.comments.order("created_at DESC").page(params[:page])
+    @comment = @post.comments.build
   end
 end

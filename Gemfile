@@ -10,7 +10,6 @@ gem 'paperclip'
 gem 'acts-as-taggable-on', '~> 2.2.2'
 gem 'country-select'
 gem 'ui_datepicker-rails3'
-gem 'wicked_pdf'
 
 gem 'thin'
 
