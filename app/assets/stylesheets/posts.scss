@@ -1,11 +1,16 @@
 $hr-margintop: 10px;
 $hr-marginbottom: 16px;
+$menu-margin: 25px;
 $red: #F93E45;
 
-div#menu { margin-top: 382px; }
+div#menu {
+  margin-top: 382px;
+  div { margin-right: $menu-margin; }
+}
 
 div#post-menu {
-  margin: 213px 122px 0 0;
+  margin-top: 213px;
+  margin-right: 126px - $menu-margin;
   text-align: right;
   font-size: 15px;
   line-height: 24px;
@@ -60,11 +65,8 @@ hr {
 }
 
 #pagination { margin-top: 10px;}
-nav.pagination {margin-top:-20px; background:white;}
 
 .readmore { color: $red; margin-left: 5px; font-size: 12px; }
-
-#comment-form { text-align: right; }
 
 p.notice {
   background: #66CC66;
@@ -73,7 +75,19 @@ p.notice {
   margin-bottom: 10px;
 }
 
+#comment-form {
+  text-align: right;
+  textarea, input.text { background: #efefef; border: 1px solid #ccc;}
+}
 
+div.comment {
+  background: #efefef;
+  margin-bottom: 15px;
+
+  .author, .date { font-size: 11px; }
+  .date { color: #666;}
+  .twelvecol { padding: 10px; }
+}
 
 
 

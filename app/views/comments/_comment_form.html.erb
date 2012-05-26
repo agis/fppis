@@ -1,19 +1,25 @@
 <div class="twelvecol last" id="comment-form">
   <h3>Post a comment</h3>
   <%= form_for [@post, @comment] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, size: 40 %>
+  <%= f.text_area :content, size: '90x10', placeholder: 'Your comment (1400 characters)' %>
   <br />
-  <%= f.label 'Country / City' %>
-  <%= f.text_field :country, size: 40 %>
+  <%# OPTIMIZE: Display error messages %>
+  <div style="float:left">
+  <%= f.label "Name*" %>
+  <%= f.text_field :name, size: 36, class: 'text' %>
+</div>
+
+  <div style="float:right;">
+  <%= f.label 'Country / City / Town*' %>
+  <%= f.text_field :country, size: 36, class: 'text' %>
+</div>
   <br />
+  <div style="float:right;">
   <%= f.label :email %>
-  <%= f.text_field :email, size: 40 %>
+  <%= f.text_field :email, size: 36, class: 'text' %>
+</div>
   <br />
-  <%= f.label :comment %>
-  <%= f.text_area :content, size: '30x6' %>
-  <br />
-  <%= f.submit "Post Comment" %>
+  <%= f.submit "Post Comment", class: 'submit' %>
   <% end %>
   <hr />
 </div>

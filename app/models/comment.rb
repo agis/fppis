@@ -3,7 +3,9 @@ class Comment < ActiveRecord::Base
 
   belongs_to :post
 
-  paginates_per 5
+  paginates_per 4
+
+  validates :content, :country, :name, presence: true
 
   # OPTIMIZE: add validations
 end

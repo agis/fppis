@@ -1,12 +1,12 @@
-<div class="row">
-  <div class="row">
-    <div class="twocol">Name:</div> <div class="tencol last"><%= comment.name %></div>
-  </div>
-  <div class="row">
-    <div class="twocol">Country:</div> <div class="tencol last"><%= comment.country %></div>
-  </div>
-  <div class="row">
-    <div class="twocol">Comment:</div> <div class="tencol last"><%= comment.content %></div>
+<div class="row comment">
+  <div class="twelvecol last">
+    <span class="author">
+      <%= comment.name %> of <%= comment.country %>
+    </span>
+    <span class="date">
+      posted at <%= comment.created_at.strftime("%F on %T") %>
+    </span>
+    <br />
+    <%= comment.content %>
   </div>
 </div>
-<hr />
