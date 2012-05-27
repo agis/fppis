@@ -1,12 +1,14 @@
 <div class="row comment">
   <div class="twelvecol last">
-    <span class="author">
-      <%= comment.name %> of <%= comment.country %>
-    </span>
-    <span class="date">
-      posted at <%= comment.created_at.strftime("%F on %T") %>
-    </span>
-    <br />
-    <%= comment.content %>
+    <div class="comment-container">
+      <span class="author">
+        <%= comment.name %> of <%= comment.country %>
+      </span>
+      <span class="date">
+        posted at <%= comment.created_at.strftime("%F on %T") %>
+      </span>
+      <br />
+      <%= comment.content %>
+    </div>
   </div>
 </div>
