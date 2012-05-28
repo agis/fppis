@@ -91,19 +91,6 @@ h1 {
   font-size: 25px;
 }
 
-div#home-slide {
-  height: 490px;
-
-  .slide-title {
-    margin-top:-11px;
-    font-size:16px
-  }
-
-  .slide-subtitle {
-    margin-left: 5px;
-  }
-}
-
 #content .row { min-width: 650px; }
 
 .floatright {float:right;}
@@ -115,33 +102,4 @@ hr {
   height: 0;
 }
 
-
 #copyright {margin-top: 10px;}
-/* ============================= */
-/* ! Layout for mobile version   */
-/* ============================= */
-
-/*@media handheld, only screen and (max-width: 767px) {
-
-  div#content {
-    #content-left {
-      margin-right: 0;
-    }
-  }
-
-  div#menu { text-align: center; }
-}
-*/
-
-/* ========================================== */
-/* ! Provide higher res assets for iPhone 4   */
-/* ========================================== */
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
-
-/*  .logo {
-    background: url(logo2x.jpg) no-repeat;
-    background-size: 212px 303px;
-  }*/
-
-}
