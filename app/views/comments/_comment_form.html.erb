@@ -1,7 +1,7 @@
 <div class="twelvecol last" id="comment-form">
   <h3>Post a comment</h3>
   <%= form_for [@post, @comment] do |f| %>
-  <%= f.text_area :content, size: '90x10', placeholder: 'Your comment (1400 characters)' %>
+  <%= f.text_area :content, size: '100x10', placeholder: 'Your comment (1400 characters)' %>
   <br />
   <%# OPTIMIZE: Display error messages %>
   <div style="float:left">
