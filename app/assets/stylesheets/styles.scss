@@ -1,20 +1,26 @@
-$grey: #000;
 $red: #F93E45;
 
-@mixin er {
-  float: right;
-  margin-top: 30px;
-}
-
 body {
-  font-family: SkarpaLt, Helvetica, Arial, sans-serif;
-  color: $grey;
+  font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+  color: black;
   line-height: 2em;
   letter-spacing: -1px;
 }
 
-a { color: $grey; }
+a { color: black; }
 a:hover { color: $red; }
+
+@font-face {
+  font-family: 'Quicksand';
+    src: url('font/Quicksand_book.eot');
+    src: url('font/Quicksand_book.eot?iefix') format('eot'),
+         url('font/Quicksand_Book.otf') format('opentype'),
+         url('font/Quicksand_book.ttf') format('truetype'),
+         url('font/Quicksand_book.svg') format('svg'),
+         url('font/Quicksand_book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .container { margin-top: 30px; }
 
@@ -33,7 +39,7 @@ div#menu {
   text-align: center;
   li { list-style-type: none; }
   a {
-    color: $grey;
+    color: black;
     text-decoration: none;
   }
   a:hover { color: $red; }
@@ -67,16 +73,6 @@ div#footer {
   font-size: 11px;
   margin-top: 20px;
   a { text-decoration: none; }
-}
-
-@font-face {
-  font-family: SkarpaLt;
-    src: url('font/SkarpaLt.eot');
-    src: url('font/SkarpaLt.eot?iefix') format('eot'),
-         url('font/Quicksand_Book.otf') format('opentype'),
-         url('font/SkarpaLt.ttf') format('truetype'),
-         url('font/SkarpaLt.svg') format('svg'),
-         url('font/SkarpaLt.woff') format('woff');
 }
 
 span.red { color: $red; }
