@@ -7,11 +7,13 @@
 
   <%= render 'comments/comment_form' %>
 
-  <h3>Comments</h3>
-  <%= render @comments %>
-  <%= paginate @comments %>
+  <div id="comments">
+    <h3>Comments</h3>
+    <%= render @comments %>
+    <%= paginate @comments %>
+  </div>
 
-  <%= render 'ruler' %>
+  <%= render partial: 'ruler', locals: { dclass: "hide" } %>
 </div>
 
 <div class="threecol last" id="right">

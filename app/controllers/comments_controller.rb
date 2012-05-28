@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @post, notice: 'Thank you for your comment!'
     else
-      redirect_to @post, notice: 'Error! Please try again'
+      redirect_to @post, notice: @comment.errors
     end
   end
 end

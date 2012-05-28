@@ -6,6 +6,6 @@ class Comment < ActiveRecord::Base
   paginates_per 4
 
   validates :content, :country, :name, presence: true
-
-  # OPTIMIZE: add validations
+  validates :content, length: { minimum: 3, maximum: 1400 }
+  validates :country, :name, length: { minimum: 3, maximum: 50 }
 end
