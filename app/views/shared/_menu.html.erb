@@ -15,7 +15,7 @@
     </li>
 
     <li style="font-size: 40px; margin-bottom: 6px;">
-      <% if current_page? posts_path %>
+      <% if controller_name == 'posts' %>
         <%= link_to "Blogs", posts_path, class: 'red' %>
       <% else %>
         <%= link_to "Blogs", posts_path %>
@@ -23,7 +23,7 @@
     </li>
 
     <li style="font-size: 40px; margin-left: 10px; margin-bottom: 5px;">
-      <% if current_page? galleries_path %>
+      <% if controller_name == 'galleries' %>
         <%= link_to "Images", galleries_path, class: 'red' %>
       <% else %>
         <%= link_to "Images", galleries_path %>

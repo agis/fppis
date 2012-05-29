@@ -4,6 +4,7 @@ ActiveAdmin.register Gallery do
   index do
     column :id
     column :title
+    column :category
     column "No. of Images" do |gallery|
       gallery.images.count
     end
