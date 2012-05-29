@@ -10,7 +10,4 @@ ActiveAdmin.register Gallery do
 
     default_actions
   end
-
-  show do
-  end
 end

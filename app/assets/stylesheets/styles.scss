@@ -43,6 +43,7 @@ a:hover { color: $red; }
     text-decoration: none;
   }
   a:hover { color: $red; }
+  a.red { color: $red; }
 }
 
 #main { width: 895px; }
@@ -75,7 +76,7 @@ a:hover { color: $red; }
   a { text-decoration: none; }
 }
 
-span.red { color: $red; }
+.red { color: $red; }
 
 h1 {
   font-size: 30px;
