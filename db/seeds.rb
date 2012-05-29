@@ -23,3 +23,6 @@ Author.create name: 'Agis Anastasopoulos'
 
 Photographer.create name: 'A photographer!'
 Photographer.create name: 'A happy photographer'
+
+Gallery.create title: 'A gallery'
+Gallery.create title: 'Test gallery'

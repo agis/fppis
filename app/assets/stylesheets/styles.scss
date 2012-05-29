@@ -24,13 +24,13 @@ a:hover { color: $red; }
 
 .container { margin-top: 30px; }
 
-div#logo {
+#logo {
   margin-bottom: 15px;
   .header { font-size: 60px; }
-  .subheader { font-size: 16px; position:relative; top: 0.5em;}
+  .subheader { font-size: 16px; position:relative; top: 0.5em; }
 }
 
-div#menu {
+#menu {
   width: 245px;
   margin-right: 0;
   margin-top: 270px;
@@ -45,9 +45,9 @@ div#menu {
   a:hover { color: $red; }
 }
 
-div#main { width: 895px; }
+#main { width: 895px; }
 
-div#post-menu {
+#post-menu {
   margin: 100px 122px 0 0;
   text-align: right;
   font-size: 15px;
@@ -57,18 +57,18 @@ div#post-menu {
   h3 { color: $red; font-size: 16px; }
 }
 
-div#left {
+#left {
   width: 650px;
   margin-right: 0;
 }
 
-div#right {
+#right {
   width: 245px;
   margin: 0;
 }
 
 
-div#footer {
+#footer {
   text-align: center;
   font-size: 11px;
   margin-top: 20px;

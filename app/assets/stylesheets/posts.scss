@@ -1,16 +1,13 @@
-$hr-margintop: 10px;
-$hr-marginbottom: 16px;
-$menu-margin: 25px;
 $red: #F93E45;
 
 div#menu {
   margin-top: 382px;
-  div { margin-right: $menu-margin; }
+  div { margin-right: 25px; }
 }
 
 div#post-menu {
   margin-top: 213px;
-  margin-right: 126px - $menu-margin;
+  margin-right: 100px;
   text-align: right;
   font-size: 15px;
   line-height: 24px;
@@ -59,8 +56,8 @@ div#footer { margin-top: -10px; }
 hr {
   border: none;
   border-top: 1px solid $red;
-  margin-top: $hr-margintop;
-  margin-bottom: $hr-marginbottom;
+  margin-top: 10px;
+  margin-bottom: 16px;
   height: 0;
 }
 
