@@ -6,9 +6,13 @@ ActiveAdmin.register Image do
       f.input :file, label: 'Image'
       f.input :caption
       f.input :gallery
-
-      f.buttons
     end
+
+    f.inputs "Details" do
+      f.input :noter
+    end
+
+    f.buttons
   end
 
   index do
