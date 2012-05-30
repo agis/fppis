@@ -6,9 +6,10 @@ ActiveAdmin.register Image do
       f.input :file, label: 'Image'
       f.input :caption
       f.input :gallery
+      f.input :tag_list, label: 'Tags', hint: 'Comma separated'
     end
 
-    f.inputs "Details" do
+    f.inputs "Credits" do
       f.input :noter
     end
 
