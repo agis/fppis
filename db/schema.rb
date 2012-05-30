@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120530081817) do
+ActiveRecord::Schema.define(:version => 20120530083158) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -87,6 +87,8 @@ ActiveRecord::Schema.define(:version => 20120530081817) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "category_id"
+    t.string   "country"
+    t.string   "city"
   end
 
   create_table "hp_first_thumbs", :force => true do |t|
