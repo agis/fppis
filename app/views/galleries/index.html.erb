@@ -3,12 +3,13 @@
   <h3><%= gallery.title %></h3>
   <ul>
     <% gallery.images.each do |image| %>
-    <li><%= image_tag image.file.url %></li>
+    <li><%= image_tag image.file.url(:thumb) %></li>
+    <%= link_to 'View Gallery', gallery %>
     <% end %>
   </ul>
   <% end %>
 </div>
 
 <div class="threecol last" id="right">
-  gallery menu
+  <%= render 'menu' %>
 </div>
