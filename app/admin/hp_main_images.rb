@@ -7,41 +7,42 @@ ActiveAdmin.register HpMainImage do
     f.inputs "Images", :multipart => true do
       f.input :rotate_delay, label: 'Rotate Delay (in milliseconds)', hint: 'Hint: can be negative'
 
-      f.input :one, label: '#1 Image', hint: f.template.image_tag(f.object.one.url(:thumb))
+      f.input :one, label: '#1 Image', hint: 'Must be 650x439'
       f.input :first_article_id,
               label: '#1 Link',
               :as => :select,
               :collection => Hash[Post.published.map{|b| [b.story_title,b.id]}]
 
-      f.input :two, label: '#2 Image', hint: f.template.image_tag(f.object.two.url(:thumb))
+      f.input :two, label: '#2 Image'
       f.input :second_article_id,
               label: '#2 Link',
               :as => :select,
               :collection => Hash[Post.published.map{|b| [b.story_title,b.id]}]
 
-      f.input :three, label: '#3 Image', hint: f.template.image_tag(f.object.three.url(:thumb))
+      f.input :three, label: '#3 Image'
       f.input :third_article_id,
               label: '#3 Link',
               :as => :select,
               :collection => Hash[Post.published.map{|b| [b.story_title,b.id]}]
 
-      f.input :four, label: '#4 Image', hint: f.template.image_tag(f.object.four.url(:thumb))
+      f.input :four, label: '#4 Image'
       f.input :fourth_article_id,
               label: '#4 Link',
               :as => :select,
               :collection => Hash[Post.published.map{|b| [b.story_title,b.id]}]
 
-      f.input :five, label: '#5 Image', hint: f.template.image_tag(f.object.five.url(:thumb))
+      f.input :five, label: '#5 Image'
       f.input :fifth_article_id,
               label: '#5 Link',
               :as => :select,
               :collection => Hash[Post.published.map{|b| [b.story_title,b.id]}]
 
-      f.input :six, label: '#6 Image', hint: f.template.image_tag(f.object.six.url(:thumb))
+      f.input :six, label: '#6 Image'
       f.input :sixth_article_id,
               label: '#6 Link',
               :as => :select,
               :collection => Hash[Post.published.map{|b| [b.story_title,b.id]}]
+      f.input :all_images, :as => :preview
     end
 
     f.buttons
