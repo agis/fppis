@@ -3,7 +3,8 @@ ActiveAdmin.register Image do
   menu parent: "Image Galleries"
 
   form do |f|
-    f.inputs :multipart => true dhint: f.template.image_tag(f.object.file.url(:thumb))
+    f.inputs :multipart => true do
+      f.input :file, label: 'Image', hint: f.template.image_tag(f.object.file.url(:thumb))
       f.input :caption
       f.input :gallery
       f.input :tag_list, label: 'Tags', hint: 'Comma separated'
