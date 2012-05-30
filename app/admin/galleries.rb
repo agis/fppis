@@ -1,5 +1,5 @@
 ActiveAdmin.register Gallery do
-  menu parent: "Image Gallery"
+  menu parent: "Image Galleries"
 
   index do
     column :id

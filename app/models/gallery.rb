@@ -6,4 +6,5 @@ class Gallery < ActiveRecord::Base
 
   validates :title, presence: true, uniqueness: true
   validates :category_id, presence: true
+  # TODO: Add Country dropdown and City/Town field and use it in frontend
 end
