@@ -11,6 +11,7 @@ ActiveAdmin.register Image do
 
     f.inputs "Credits" do
       f.input :noter
+      f.input :photographer
     end
 
     f.buttons
