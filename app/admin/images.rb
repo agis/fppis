@@ -1,9 +1,9 @@
 ActiveAdmin.register Image do
+  actions :all, except: :show
   menu parent: "Image Galleries"
 
   form do |f|
-    f.inputs :multipart => true do
-      f.input :file, label: 'Image'
+    f.inputs :multipart => true dhint: f.template.image_tag(f.object.file.url(:thumb))
       f.input :caption
       f.input :gallery
       f.input :tag_list, label: 'Tags', hint: 'Comma separated'
@@ -26,15 +26,5 @@ ActiveAdmin.register Image do
     column :gallery
 
     default_actions
-  end
-
-  # TODO: Show thumbnail in edit action
-
-  controller do
-    def show
-      show! do |format|
-        format.html { redirect_to admin_images_path }
-      end
-    end
   end
 end
