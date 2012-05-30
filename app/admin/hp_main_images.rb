@@ -1,7 +1,7 @@
 ActiveAdmin.register HpMainImage do
   menu :parent => "Homepage", :label => 'Main Image Area'
   config.clear_sidebar_sections!
-  actions :all, :except => [:new, :destroy]
+  actions :all, :except => [:new, :show, :destroy]
 
   form do |f|
     f.inputs "Images", :multipart => true do
@@ -74,15 +74,6 @@ ActiveAdmin.register HpMainImage do
       image_tag main_image.six.url(:thumb)
     end
   end
-
-  controller do
-    def show
-      show! do |format|
-        format.html { redirect_to admin_hp_main_images_path }
-      end
-    end
-  end
-
 
   sidebar " " do
     raise "More than one Homepage resources detected. Contact the developer please." if HpMainImage.count > 1

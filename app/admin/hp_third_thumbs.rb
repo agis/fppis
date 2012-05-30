@@ -1,7 +1,7 @@
 ActiveAdmin.register HpThirdThumb do
   menu :parent => "Homepage", :label => 'Thumb #3 Area'
   config.clear_sidebar_sections!
-  actions :all, :except => [:new, :destroy]
+  actions :all, :except => [:new, :show, :destroy]
 
   form do |f|
     f.inputs "Images", :multipart => true do
@@ -70,14 +70,6 @@ ActiveAdmin.register HpThirdThumb do
 
     column "Image #6" do |main_image|
       image_tag main_image.six.url
-    end
-  end
-
-  controller do
-    def show
-      show! do |format|
-        format.html { redirect_to admin_hp_third_thumbs_path }
-      end
     end
   end
 

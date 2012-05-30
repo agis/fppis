@@ -1,7 +1,7 @@
 ActiveAdmin.register HpFirstThumb do
   menu :parent => "Homepage", :label => 'Thumb #1 Area'
   config.clear_sidebar_sections!
-  actions :all, :except => [:new, :destroy]
+  actions :all, :except => [:new, :show, :destroy]
 
   form do |f|
     f.inputs "Images", :multipart => true do
@@ -71,14 +71,6 @@ ActiveAdmin.register HpFirstThumb do
 
     column "Image #6" do |first_thumb|
       image_tag first_thumb.six.url
-    end
-  end
-
-  controller do
-    def show
-      show! do |format|
-        format.html { redirect_to admin_hp_first_thumbs_path }
-      end
     end
   end
 
