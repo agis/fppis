@@ -1,9 +1,10 @@
 ActiveAdmin.register Image do
-  menu parent: "Image Gallery"
+  menu parent: "Image Galleries"
 
   form do |f|
     f.inputs :multipart => true do
-      f.input :file
+      f.input :file, label: 'Image'
+      f.input :caption
       f.input :gallery
 
       f.buttons
@@ -12,15 +13,16 @@ ActiveAdmin.register Image do
 
   index do
     column :id
-
     column "Image" do |image|
       image_tag image.file.url(:thumb)
     end
-
+    column :caption
     column :gallery
 
     default_actions
   end
+
+  # TODO: Show thumbnail in edit action
 
   controller do
     def show
