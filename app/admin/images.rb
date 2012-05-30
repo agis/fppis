@@ -25,6 +25,8 @@ ActiveAdmin.register Image do
     end
     column :caption
     column :gallery
+    column :noter
+    column :photographer
 
     default_actions
   end
