@@ -3,8 +3,6 @@ ActiveAdmin.register HpFirstThumb do
   config.clear_sidebar_sections!
   actions :all, :except => [:new, :show, :destroy]
 
-  # OPTIMIZE: Refactor to use a hint instead of input for previewing (see HpMainImages)
-
   form do |f|
     f.inputs "Images", :multipart => true do
       f.input :one, label: '#1 Image', hint: 'Must be 143x143'
