@@ -1,6 +1,12 @@
 class AlbumsController < ApplicationController
   def index
-    set_images
+    if params[:c]
+      @category = Category.find_by_title(params[:c])
+      @albums = Album.where("category_id = ?", @category.id).limit(12)
+      render 'filter'
+    else
+      set_images
+    end
   end
 
   def show
@@ -15,17 +21,17 @@ class AlbumsController < ApplicationController
     @people_images = []
     @places_images = []
 
-    albums = Album.where("category_id = 1").order("created_at DESC").limit(3)
+    albums = Album.where("category_id = 1").limit(3)
     albums.each do |album|
       @food_images << album.images.last unless album.images.empty?
     end
 
-    albums = Album.where("category_id = 2").order("created_at DESC").limit(3)
+    albums = Album.where("category_id = 2").limit(3)
     albums.each do |album|
       @people_images << album.images.last unless album.images.empty?
     end
 
-    albums = Album.where("category_id = 3").order("created_at DESC").limit(3)
+    albums = Album.where("category_id = 3").limit(3)
     albums.each do |album|
       @places_images << album.images.last unless album.images.empty?
     end

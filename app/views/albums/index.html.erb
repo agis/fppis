@@ -3,7 +3,7 @@
   <div class="row">
     <div class="fourcol">
       <span class="title">
-        <%= link_to c: 'food' do %>
+        <%= link_to c: 'Food' do %>
         FOOD<br />
         Image
         <% end %>
@@ -11,7 +11,7 @@
     </div>
     <div class="fourcol">
       <span class="title">
-        <%= link_to c: 'people' do %>
+        <%= link_to c: 'People' do %>
         PEOPLE<br />
         Image
         <% end %>
@@ -19,7 +19,7 @@
     </div>
     <div class="fourcol last">
       <span class="title">
-        <%= link_to c: 'places' do %>
+        <%= link_to c: 'Places' do %>
         PLACES<br />
         Image
         <% end %>
@@ -30,7 +30,7 @@
   <div class="row">
     <div class="fourcol">
       <% @food_images.each do |image| %>
-      <%= link_to album_path(image.album), class: 'album' do %>
+      <%= link_to album_path(image.album) do %>
       <%= image_tag image.file.url(:thumb) %>
       <% end %>
       <br />
@@ -38,7 +38,7 @@
     </div>
     <div class="fourcol">
       <% @people_images.each do |image| %>
-      <%= link_to album_path(image.album), class: 'album' do %>
+      <%= link_to album_path(image.album) do %>
       <%= image_tag image.file.url(:thumb) %>
       <% end %>
       <br />
@@ -46,7 +46,7 @@
     </div>
     <div class="fourcol last">
       <% @places_images.each do |image| %>
-        <%= link_to album_path(image.album), class: 'album' do %>
+        <%= link_to album_path(image.album) do %>
           <%= image_tag image.file.url(:thumb) %>
         <% end %>
         <br />

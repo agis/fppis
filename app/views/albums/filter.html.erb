@@ -1,0 +1,20 @@
+<div class="twelvecol last">
+  <hr />
+
+  <h1><%= @category.title %> Image</h1>
+
+    <% @albums.each_slice(3) do |albums_for_row| %>
+    <div class="row">
+      <% albums_for_row.each do |album| %>
+      <div class="threecol">
+        <%= link_to album do %>
+        <%= image_tag album.images.last.file.url(:thumb) %>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+
+  <hr class="nobottom" />
+</div>
