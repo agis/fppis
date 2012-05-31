@@ -45,9 +45,9 @@
   <div id="albums-menu">
     <h4>Categories</h4>
     <ul>
-      <li>Food</li>
-      <li style="margin-left: -22px;">People</li>
-      <li style="margin-left: 15px;">Places</li>
+      <li><%= link_to 'Food', albums_path + '?c=Food' %></li>
+      <li style="margin-left: -22px;"><%= link_to 'People', albums_path + '?c=People' %></li>
+      <li style="margin-left: 15px;"><%= link_to 'Places', albums_path + '?c=Places' %></li>
     </ul>
   </div>
   <% end %>
