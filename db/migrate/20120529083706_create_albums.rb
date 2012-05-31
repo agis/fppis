@@ -1,6 +1,6 @@
-class CreateGalleries < ActiveRecord::Migration
+class CreateAlbums < ActiveRecord::Migration
   def change
-    create_table :galleries do |t|
+    create_table :albums do |t|
       t.string :title
 
       t.timestamps
