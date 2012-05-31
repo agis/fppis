@@ -30,7 +30,7 @@
   <div class="row">
     <div class="fourcol">
       <% @food_images.each do |image| %>
-      <%= link_to gallery_path(image.gallery), class: 'gallery' do %>
+      <%= link_to album_path(image.album), class: 'album' do %>
       <%= image_tag image.file.url(:thumb) %>
       <% end %>
       <br />
@@ -38,7 +38,7 @@
     </div>
     <div class="fourcol">
       <% @people_images.each do |image| %>
-      <%= link_to gallery_path(image.gallery), class: 'gallery' do %>
+      <%= link_to album_path(image.album), class: 'album' do %>
       <%= image_tag image.file.url(:thumb) %>
       <% end %>
       <br />
@@ -46,7 +46,7 @@
     </div>
     <div class="fourcol last">
       <% @places_images.each do |image| %>
-        <%= link_to gallery_path(image.gallery), class: 'gallery' do %>
+        <%= link_to album_path(image.album), class: 'album' do %>
           <%= image_tag image.file.url(:thumb) %>
         <% end %>
         <br />

@@ -1,4 +1,4 @@
-class Gallery < ActiveRecord::Base
+class Album < ActiveRecord::Base
   attr_accessible :title, :category_id, :country, :city
 
   has_many :images

@@ -23,10 +23,10 @@
     </li>
 
     <li style="font-size: 40px; margin-left: 10px; margin-bottom: 5px;">
-      <% if controller_name == 'galleries' %>
-        <%= link_to "Images", galleries_path, class: 'red' %>
+      <% if controller_name == 'albums' %>
+        <%= link_to "Images", albums_path, class: 'red' %>
       <% else %>
-        <%= link_to "Images", galleries_path %>
+        <%= link_to "Images", albums_path %>
       <% end %>
     </li>
 
@@ -40,9 +40,9 @@
   </ul>
 </div>
 
-<% if params[:controller] == 'galleries' %>
+<% if params[:controller] == 'albums' %>
   <% if params[:action] == 'show' %>
-  <div id="galleries-menu">
+  <div id="albums-menu">
     <h4>Categories</h4>
     <ul>
       <li>Food</li>
@@ -54,7 +54,7 @@
 
   <div id="back-button">
     <ul>
-      <li><%= link_to 'Back to Images', galleries_path %></li>
+      <li><%= link_to 'Back to Images', albums_path %></li>
     </ul>
   </div>
 <% end %>

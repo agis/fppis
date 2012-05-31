@@ -13,7 +13,7 @@ Fppis::Application.routes.draw do
     resources :comments, only: [:create]
   end
 
-  resources :galleries, only: [:index, :show]
+  resources :albums, only: [:index, :show]
 
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config

@@ -4,4 +4,5 @@ class Category < ActiveRecord::Base
   validates :title, uniqueness: true, presence: true, length: { minimum: 3 }
 
   has_many :posts
+  has_many :albums
 end
