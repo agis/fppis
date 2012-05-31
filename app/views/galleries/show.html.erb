@@ -1,14 +1,16 @@
-<div class="ninecol" id="left">
-  <h1><%= @gallery.title %></h1>
-  <ul>
-  <% @images.each do |image| %>
-  <li>
-    <%= image_tag image.file.url(:thumb) %>
-    <%= image.caption %>
-  </li>
-  <% end %>
-</div>
+<div class="twelvecol last">
+  <hr />
 
-<div class="threecol last" id="right">
-  <%= render 'menu' %>
+  <%= render 'gallery_details' %>
+
+  <%= image_tag @images.first.file.url %><br />
+  <%= @images.first.caption %>
+
+  <br />
+
+  <% @images.each do |image| %>
+  <%= image_tag image.file.url(:thumb) %>
+  <% end %>
+
+  <hr class="nobottom" />
 </div>

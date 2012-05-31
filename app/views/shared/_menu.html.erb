@@ -39,3 +39,22 @@
     </li>
   </ul>
 </div>
+
+<% if params[:controller] == 'galleries' %>
+  <% if params[:action] == 'show' %>
+  <div id="galleries-menu">
+    <h4>Categories</h4>
+    <ul>
+      <li>Food</li>
+      <li style="margin-left: -22px;">People</li>
+      <li style="margin-left: 15px;">Places</li>
+    </ul>
+  </div>
+  <% end %>
+
+  <div id="back-button">
+    <ul>
+      <li><%= link_to 'Back to Images', galleries_path %></li>
+    </ul>
+  </div>
+<% end %>

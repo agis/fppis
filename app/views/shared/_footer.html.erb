@@ -1,4 +1,9 @@
+<% if params[:controller] == 'galleries' %>
+<div class="twelvecol last">
+<% else %>
 <div class="ninecol last">
+<% end %>
+
   <div class="twelvecol last" id="footer-menu">
     <div class="threecol" style="margin-left:3.8%; text-align:right;">
       <%= link_to 'more fppis', more_fppis_path %>

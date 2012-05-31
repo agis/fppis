@@ -1,0 +1,47 @@
+$red: #F93E45;
+
+a.gallery { text-decoration: none; }
+
+#menu {
+
+}
+
+#galleries-menu {
+  margin-top: 50px;
+
+  h4 {
+    font-size: 20px;
+    color: #175D38;
+    text-transform:none;
+  }
+}
+
+#back-button {
+  margin-top: 50px;
+  text-transform: none;
+  border: 1px solid $red;
+  width: 70%;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-details {
+  font-size: 21px;
+  height: 75px;
+
+  .title {
+    float:left;
+    width: 95px;
+    color: $red;
+    font-size: 26px;
+  }
+}
+
+.title { font-size: 29px;}
+.fourcol { text-align: center; }
+
+hr { margin: 20px 0; }
+hr.nobottom { margin-bottom: 0; }
+
+

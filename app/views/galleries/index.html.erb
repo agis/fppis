@@ -1,15 +1,57 @@
-<div class="ninecol" id="left">
-  <% @galleries.each do |gallery| %>
-  <h3><%= gallery.title %></h3>
-  <ul>
-    <% gallery.images.each do |image| %>
-    <li><%= image_tag image.file.url(:thumb) %></li>
-    <%= link_to 'View Gallery', gallery %>
-    <% end %>
-  </ul>
-  <% end %>
-</div>
+<div class="twelvecol last">
+  <hr />
+  <div class="row">
+    <div class="fourcol">
+      <span class="title">
+        <%= link_to c: 'food' do %>
+        FOOD<br />
+        Image
+        <% end %>
+      </span>
+    </div>
+    <div class="fourcol">
+      <span class="title">
+        <%= link_to c: 'people' do %>
+        PEOPLE<br />
+        Image
+        <% end %>
+      </span>
+    </div>
+    <div class="fourcol last">
+      <span class="title">
+        <%= link_to c: 'places' do %>
+        PLACES<br />
+        Image
+        <% end %>
+      </span>
+    </div>
+  </div>
 
-<div class="threecol last" id="right">
-  <%= render 'menu' %>
+  <div class="row">
+    <div class="fourcol">
+      <% @food_images.each do |image| %>
+      <%= link_to gallery_path(image.gallery), class: 'gallery' do %>
+      <%= image_tag image.file.url(:thumb) %>
+      <% end %>
+      <br />
+      <% end %>
+    </div>
+    <div class="fourcol">
+      <% @people_images.each do |image| %>
+      <%= link_to gallery_path(image.gallery), class: 'gallery' do %>
+      <%= image_tag image.file.url(:thumb) %>
+      <% end %>
+      <br />
+      <% end %>
+    </div>
+    <div class="fourcol last">
+      <% @places_images.each do |image| %>
+        <%= link_to gallery_path(image.gallery), class: 'gallery' do %>
+          <%= image_tag image.file.url(:thumb) %>
+        <% end %>
+        <br />
+      <% end %>
+    </div>
+  </div>
+  <hr class="nobottom" />
 </div>

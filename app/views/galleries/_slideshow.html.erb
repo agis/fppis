@@ -1,0 +1,11 @@
+<%# OPTIMIZE: Move the styles to external file %>
+<div class="slideshow" style="height:439px;">
+
+  <% @slide_images.each do |image| %>
+  <div style="height:439px;">
+    <%= image.caption %>
+  <%= image_tag image.file.url %>
+  </div>
+  <% end %>
+  
+</div>
