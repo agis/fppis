@@ -6,7 +6,7 @@ ActiveAdmin.register Image do
     f.inputs :multipart => true do
       f.input :file, label: 'Image', hint: f.template.image_tag(f.object.file.url(:thumb))
       f.input :caption
-      f.input :gallery
+      f.input :album
       f.input :tag_list, label: 'Tags', hint: 'Comma separated'
     end
 
@@ -24,7 +24,7 @@ ActiveAdmin.register Image do
       image_tag image.file.url(:thumb)
     end
     column :caption
-    column :gallery
+    column :album
     column :noter
     column :photographer
 

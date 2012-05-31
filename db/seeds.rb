@@ -19,10 +19,7 @@ Category.create title: 'People'
 Category.create title: 'Places'
 
 Author.create name: 'Corey Tai'
-Author.create name: 'Agis Anastasopoulos'
 
 Photographer.create name: 'A photographer!'
-Photographer.create name: 'A happy photographer'
 
-Album.create title: 'A gallery'
-Album.create title: 'Test gallery'
+Noter.create name: 'A noter'
