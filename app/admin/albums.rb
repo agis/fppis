@@ -1,5 +1,5 @@
 ActiveAdmin.register Album do
-  menu parent: "Image Galleries"
+  menu parent: "Image Albums"
   actions :all, :except => [:show]
 
   index do

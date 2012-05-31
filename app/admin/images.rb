@@ -1,6 +1,6 @@
 ActiveAdmin.register Image do
   actions :all, except: :show
-  menu parent: "Image Galleries"
+  menu parent: "Image Albums"
 
   form do |f|
     f.inputs :multipart => true do
