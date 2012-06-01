@@ -2,7 +2,7 @@ class AlbumsController < ApplicationController
   def index
     if params[:c]
       @category = Category.find_by_title(params[:c])
-      @albums = Album.where("category_id = ?", @category.id).limit(12)
+      set_albums
       render 'filter'
     else
       set_images
@@ -34,6 +34,15 @@ class AlbumsController < ApplicationController
     albums = Album.where("category_id = 3").limit(3)
     albums.each do |album|
       @places_images << album.images.last unless album.images.empty?
+    end
+  end
+
+  def set_albums
+    @albums = []
+    albums = Album.where("category_id = ?", @category.id).limit(12)
+
+    albums.each do |album|
+      @albums << album unless album.images.empty?
     end
   end
 end

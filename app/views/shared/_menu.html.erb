@@ -41,20 +41,20 @@
 </div>
 
 <% if params[:controller] == 'albums' %>
-  <% if params[:action] == 'show' %>
   <div id="albums-menu">
-    <h4>Categories</h4>
+    <h4 class="oblique">Categories</h4>
     <ul>
       <li><%= link_to 'Food', albums_path + '?c=Food' %></li>
       <li style="margin-left: -22px;"><%= link_to 'People', albums_path + '?c=People' %></li>
       <li style="margin-left: 15px;"><%= link_to 'Places', albums_path + '?c=Places' %></li>
     </ul>
   </div>
-  <% end %>
 
+  <% unless params[:action] == 'index' %>
   <div id="back-button">
     <ul>
       <li><%= link_to 'Back to Images', albums_path %></li>
     </ul>
   </div>
+  <% end %>
 <% end %>

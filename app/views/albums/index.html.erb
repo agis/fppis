@@ -1,57 +1,56 @@
-<div class="twelvecol last">
+<div class="twelvecol last" id="image-content">
   <hr />
-  <div class="row">
+
+  <div class="row" id="cat-titles">
     <div class="fourcol">
       <span class="title">
         <%= link_to c: 'Food' do %>
-        FOOD<br />
-        Image
+        FOOD
         <% end %>
       </span>
     </div>
+
     <div class="fourcol">
       <span class="title">
         <%= link_to c: 'People' do %>
-        PEOPLE<br />
-        Image
+        PEOPLE
         <% end %>
       </span>
     </div>
+
     <div class="fourcol last">
       <span class="title">
         <%= link_to c: 'Places' do %>
-        PLACES<br />
-        Image
+        PLACES
         <% end %>
       </span>
     </div>
   </div>
 
   <div class="row">
-    <div class="fourcol">
+    <div class="fourcol" style="text-align:left;">
       <% @food_images.each do |image| %>
       <%= link_to album_path(image.album) do %>
-      <%= image_tag image.file.url(:thumb) %>
+      <%= image_tag image.file.url(:thumb), class: 'tn' %>
       <% end %>
-      <br />
       <% end %>
     </div>
-    <div class="fourcol">
+    <div class="fourcol" style="text-align:center;">
       <% @people_images.each do |image| %>
       <%= link_to album_path(image.album) do %>
-      <%= image_tag image.file.url(:thumb) %>
+      <%= image_tag image.file.url(:thumb), class: 'tn' %>
       <% end %>
-      <br />
       <% end %>
     </div>
-    <div class="fourcol last">
+    <div class="fourcol last" style="text-align: right;">
       <% @places_images.each do |image| %>
-        <%= link_to album_path(image.album) do %>
-          <%= image_tag image.file.url(:thumb) %>
+      <%= link_to album_path(image.album) do %>
+      <%= image_tag image.file.url(:thumb), class: 'tn' %>
         <% end %>
-        <br />
       <% end %>
     </div>
   </div>
+
+
   <hr class="nobottom" />
 </div>

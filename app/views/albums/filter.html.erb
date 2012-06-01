@@ -1,20 +1,30 @@
-<div class="twelvecol last">
+<div class="twelvecol last" id="image-content">
   <hr />
 
-  <h1><%= @category.title %> Image</h1>
+  <div class="row">
+    <h1><%= @category.title.upcase %> : Albums</h1>
+  </div>
 
     <% @albums.each_slice(3) do |albums_for_row| %>
-    <div class="row">
+    <div class="row tn">
+      <% counter = 0 %>
       <% albums_for_row.each do |album| %>
-      <div class="threecol">
-        <%= link_to album do %>
-        <%= image_tag album.images.last.file.url(:thumb) %>
+        <% case counter %>
+        <% when 0 %>
+          <div class="fourcol" style="text-align: left;">
+        <% when 1 %>
+          <div class="fourcol" style="text-align: center;">
+        <% when 2 %>
+          <div class="fourcol last" style="text-align: right;">
+        <% end %>
+            <%= link_to album do %>
+            <%= image_tag album.images.last.file.url(:thumb) %>
         <% end %>
       </div>
+      <% counter += 1 %>
       <% end %>
     </div>
     <% end %>
-  </div>
 
   <hr class="nobottom" />
 </div>

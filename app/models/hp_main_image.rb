@@ -5,7 +5,13 @@ class HpMainImage < ActiveRecord::Base
 
   style = { :styles => { :thumb => '258x174'} }
 
-  has_attached_file :one,   style
+  s3_host = 's3-eu-west-1.amazonaws.com'
+  s3_credentials = "#{Rails.root}/config/s3.yml"
+
+  has_attached_file :one,   :styles => { :thumb => '258x174'},
+                     storage: :s3,
+                      s3_credentials: s3_credentials,
+                      s3_host_name: s3_host
   has_attached_file :two,   style
   has_attached_file :three, style
   has_attached_file :four,  style

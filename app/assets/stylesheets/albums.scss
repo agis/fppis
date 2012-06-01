@@ -3,7 +3,19 @@ $red: #F93E45;
 a { text-decoration: none; }
 
 #menu {
+  margin-top: 347px;
+}
 
+div#image-content {
+  width: 832px;
+
+  .fourcol {
+    width: 31.4%;
+    margin-right: 3%;
+    text-align: center;
+  }
+
+  .last { margin-right: 0;}
 }
 
 #albums-menu {
@@ -38,10 +50,22 @@ a { text-decoration: none; }
   }
 }
 
-.title { font-size: 29px;}
-.fourcol { text-align: center; }
+
+#cat-titles {
+  margin: 36px 0;
+  line-height: 1;
+
+  .title a {
+  font-size: 38px;
+  color: $red;
+}
+}
+
 
 hr { margin: 20px 0; }
 hr.nobottom { margin-bottom: 0; }
+
+.tn { margin-bottom: 25px;}
+
 
 

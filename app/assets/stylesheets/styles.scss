@@ -22,6 +22,19 @@ a:hover { color: $red; }
   font-style: normal;
 }
 
+
+@font-face {
+    font-family: 'QuicksandBookObliqueRegular';
+    src: url('font/quicksand_book_oblique-webfont.eot');
+    src: url('font/quicksand_book_oblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/quicksand_book_oblique-webfont.woff') format('woff'),
+         url('font/quicksand_book_oblique-webfont.ttf') format('truetype'),
+         url('font/Quicksand_book_oblique-webfont.otf') format('opentype'),
+         url('font/quicksand_book_oblique-webfont.svg#QuicksandBookObliqueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .container { margin-top: 30px; }
 
 #logo {
@@ -101,3 +114,5 @@ hr {
 
 #copyright {margin-top: 10px;}
 img { max-width: none;}
+
+.oblique { font-family: 'QuicksandBookObliqueRegular'; }

@@ -1,10 +1,12 @@
-<div class="twelvecol last">
+<div class="twelvecol last" id="image-content">
   <hr />
 
   <%= render 'album_details' %>
 
   <%= image_tag @images.first.file.url %><br />
-  <%= @images.first.caption %>
+  <div class="row" style="text-align: center;">
+    <%= @images.first.caption %>
+  </div>
 
   <br />
 

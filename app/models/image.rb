@@ -2,7 +2,7 @@ class Image < ActiveRecord::Base
   attr_accessible :caption, :file, :album_id, :noter_id,
                   :tag_list, :photographer_id
 
-  has_attached_file :file, styles: { thumb: "100x100" }
+  has_attached_file :file, styles: { thumb: '245x153',   }
 
   acts_as_taggable
 
