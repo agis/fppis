@@ -2,6 +2,7 @@ development:
   bucket: fppis
   access_key_id: AKIAJS5LXFFIXGEZFL3A
   secret_access_key: 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
+  host: s3-eu-west-1.amazonaws.com
 test:
   bucket: fppis
   access_key_id: AKIAJS5LXFFIXGEZFL3A
