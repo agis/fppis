@@ -48,7 +48,7 @@ table {
   border-spacing: 0;
 }
 
-#menu, #right, #disqus_thread, #comment-form, #comments, .dclass, #footer-menu { display: none; }
+#menu, #right, #comment-form, #comments, .dclass, #footer-menu { display: none; }
 .container { margin: 0; }
 
 #left { width: 100%; }
