@@ -62,7 +62,7 @@ module Fppis
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1'
 
-    # Added to fix devise/active admin issue
+    # Added to fix devise/active admin issue. Required by Heroku!
     config.assets.initialize_on_precompile = false
 
     # Precompile additional assets. Defaults to [application.js, application.css, non-JS/CSS]

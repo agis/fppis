@@ -15,6 +15,7 @@ Fppis::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
+  # default = false. Best for performance, requires to precompile assets
   config.assets.compile = false
 
   # Generate digests for assets URLs
