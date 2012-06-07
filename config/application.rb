@@ -10,9 +10,9 @@ require "sprockets/railtie"
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  #Bundler.require(:default, :assets, Rails.env)
-  # If you want your assets lazily compiled in production, use this line
   Bundler.require(:default, :assets, Rails.env)
+  # If you want your assets lazily compiled in production, use this line
+  # Bundler.require(:default, :assets, Rails.env)
 end
 
 module Fppis
@@ -66,7 +66,7 @@ module Fppis
     config.assets.initialize_on_precompile = false
 
     # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-    config.assets.precompile += %w( search.js active_admin.css.scss active_admin.js )
+    config.assets.precompile += %w( search.js active_admin.css.scss active_admin.js active_admin/print.css )
     config.assets.precompile += %w( pages.css posts.css albums.css print.css active_admin.css )
   end
 end
