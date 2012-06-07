@@ -28,7 +28,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="twocol" id="menu">
+    <div class="twocol" id="menu" <%= raw 'style="margin-top:230px;"' if params[:c] %> <%= raw 'style="margin-top:266px;"' if params[:controller] == 'albums' && params[:action] =='show' %> >
       <%= render 'shared/menu' %>
     </div>
 

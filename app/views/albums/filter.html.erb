@@ -1,8 +1,10 @@
 <div class="twelvecol last" id="image-content">
-  <hr />
+  <hr class="nomargintop" />
 
-  <div class="row">
-    <h1><%= @category.title.upcase %> : Albums</h1>
+  <div class="row" id="cat-titles">
+    <span class="title">
+      <span class="red"><%= @category.title.upcase %></span> : Albums
+    </span>
   </div>
 
     <% @albums.each_slice(3) do |albums_for_row| %>

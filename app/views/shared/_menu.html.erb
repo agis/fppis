@@ -1,12 +1,12 @@
 <div>
   <ul>
     <% unless current_page? root_path %>
-    <li style="line-height: 25px;">
+    <li style="line-height: 25px; margin-right: 60px;">
       <%= link_to "Home", root_path %>
     </li>
     <% end %>
 
-    <li style="margin-bottom: 5px;">
+    <li style="margin-left: 60px;">
       <% if current_page? who_path %>
         <%= link_to "Who", who_path, class: 'red' %>
       <% else %>
@@ -14,7 +14,7 @@
       <% end %>
     </li>
 
-    <li style="font-size: 40px; margin-bottom: 6px;">
+    <li style="font-size: 40px; margin-bottom: 6px; margin-right: 90px;">
       <% if controller_name == 'posts' %>
         <%= link_to "Blogs", posts_path, class: 'red' %>
       <% else %>
@@ -22,7 +22,7 @@
       <% end %>
     </li>
 
-    <li style="font-size: 40px; margin-left: 10px; margin-bottom: 5px;">
+    <li style="font-size: 40px; margin-left: 10px; margin-left: 50px;">
       <% if controller_name == 'albums' %>
         <%= link_to "Images", albums_path, class: 'red' %>
       <% else %>
@@ -30,7 +30,7 @@
       <% end %>
     </li>
 
-    <li>
+    <li style="margin-right: 90px;">
       <% if current_page? contact_path %>
         <%= link_to "Contact", contact_path, class: 'red' %>
       <% else %>
@@ -45,13 +45,28 @@
     <h4 class="oblique">Categories</h4>
     <ul>
       <li><%= link_to 'Food', albums_path + '?c=Food' %></li>
-      <li style="margin-left: -22px;"><%= link_to 'People', albums_path + '?c=People' %></li>
-      <li style="margin-left: 15px;"><%= link_to 'Places', albums_path + '?c=Places' %></li>
+      <li style="margin-left: -63px;"><%= link_to 'People', albums_path + '?c=People' %></li>
+      <li style="margin-left: 27px;"><%= link_to 'Places', albums_path + '?c=Places' %></li>
     </ul>
   </div>
 
-  <% unless params[:action] == 'index' %>
-  <div id="back-button">
+  <% if params[:c] %>
+  <div id="archive-menu">
+    <h4 class="oblique">Archive</h4>
+    <ul>
+      <a href="#"><li style="margin-right: 25px;">May</li></a>
+      <a href="#"><li style="margin-left: 30px;">April</li></a>
+      <a href="#"><li style="margin-right: 45px;">March</li></a>
+      <a href="#"><li style="margin-left: 38px;">February</li></a>
+      <a href="#"><li style="margin-right: 40px;">January</li></a>
+      <a href="#"><li style="margin-left: 43px;">December</li></a>
+      <a href="#"><li style="margin-right: 37px;">Older</li></a>
+    </ul>
+  </div>
+  <% end %>
+
+  <% unless params[:action] == 'index' && !params[:c] %>
+  <div class="oblique" id="back-button">
     <ul>
       <li><%= link_to 'Back to Images', albums_path %></li>
     </ul>

@@ -1,10 +1,9 @@
 $red: #F93E45;
+$green: #175D38;
 
 a { text-decoration: none; }
 
-#menu {
-  margin-top: 347px;
-}
+#menu { margin-top: 320px; }
 
 div#image-content {
   width: 832px;
@@ -18,24 +17,35 @@ div#image-content {
   .last { margin-right: 0;}
 }
 
-#albums-menu {
+#albums-menu, #archive-menu {
   margin-top: 50px;
+  font-size: 27px;
+
+  ul { line-height: 24px; }
 
   h4 {
     font-size: 20px;
-    color: #175D38;
     text-transform:none;
+    color: $green;
+  }
+}
+
+#archive-menu {
+  li {
+    font-size: 20px;
+    text-transform: none;
   }
 }
 
 #back-button {
   margin-top: 50px;
   text-transform: none;
-  border: 1px solid $red;
   width: 70%;
   font-size: 20px;
   margin-left: auto;
   margin-right: auto;
+
+  a { color: $green; }
 }
 
 .album-details {
@@ -52,13 +62,17 @@ div#image-content {
 
 
 #cat-titles {
-  margin: 36px 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
   line-height: 1;
 
-  .title a {
+  .title {
   font-size: 38px;
-  color: $red;
-}
+  }
+
+  .title a {
+    color: $red;
+  }
 }
 
 
