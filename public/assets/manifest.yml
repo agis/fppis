@@ -3,6 +3,7 @@ logo.png: logo-dfa0178566d3ba0b1686c9940f67af72.png
 rails.png: rails-11fc762a34e78e79a57cc0d6fef2cf62.png
 star.png: star-c2b4ac04a0b06a92509cc0fbc2420ab7.png
 application.js: application-13d6143e932059526c69dd4aa7c4f175.js
+albums.css: albums-5917d484da4037fff8eee1ce884383d9.css
 application.css: application-254f4433a3fbf8568fbc6fc743dab44c.css
 font/Quicksand_Book.otf: font/Quicksand_Book-2672c2c1b7fc2718f57c3e86582d913a.otf
 font/Quicksand_book.eot: font/Quicksand_book-9825a8c5fc13c5650f600f94c0f7e0f2.eot
@@ -15,6 +16,8 @@ font/quicksand_book_oblique-webfont.svg: font/quicksand_book_oblique-webfont-a91
 font/quicksand_book_oblique-webfont.ttf: font/quicksand_book_oblique-webfont-4a39aad1952fc75aa1636a627658bc1f.ttf
 font/quicksand_book_oblique-webfont.woff: font/quicksand_book_oblique-webfont-897d8aaed6e1d27911657bc906268051.woff
 pages.css: pages-0d17221f0e56b8ae9c35c9dffa5e0bc5.css
+posts.css: posts-f01c0c5e036651ef5819bac603072622.css
+print.css: print-76035f4ead566a30d31cdfd75026505b.css
 active_admin.js: active_admin-b277f2a69e8dd2c836dfcb4e5ee4501c.js
 ckeditor/application.js: ckeditor/application-374c0166af1d8b596d96aaf5afe8affc.js
 ckeditor/application.css: ckeditor/application-158c9d80a63b55116f3d38446a6225af.css

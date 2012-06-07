@@ -65,7 +65,8 @@ module Fppis
     # Added to fix devise/active admin issue. Required by Heroku!
     config.assets.initialize_on_precompile = false
 
-    # Precompile additional assets. Defaults to [application.js, application.css, non-JS/CSS]
-    config.assets.precompile += %w( active_admin.css.scss active_admin.js pages.scss pages.css )
+    # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
+    config.assets.precompile += %w( search.js active_admin.css.scss active_admin.js )
+    config.assets.precompile += %w( pages.css posts.css albums.css print.css )
   end
 end
