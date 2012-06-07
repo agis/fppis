@@ -66,6 +66,6 @@ module Fppis
     config.assets.initialize_on_precompile = false
 
     # Precompile additional assets. Defaults to [application.js, application.css, non-JS/CSS]
-    config.assets.precompile += %w( active_admin.css.scss active_admin.js print.css )
+    config.assets.precompile += %w( active_admin.css.scss active_admin.js print.css pages.scss posts.scss albums.scss )
   end
 end
