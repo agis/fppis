@@ -14,7 +14,6 @@ font/quicksand_book_oblique-webfont.otf: font/quicksand_book_oblique-webfont-7f0
 font/quicksand_book_oblique-webfont.svg: font/quicksand_book_oblique-webfont-a91484190ac799035abd13f775c2dd0d.svg
 font/quicksand_book_oblique-webfont.ttf: font/quicksand_book_oblique-webfont-4a39aad1952fc75aa1636a627658bc1f.ttf
 font/quicksand_book_oblique-webfont.woff: font/quicksand_book_oblique-webfont-897d8aaed6e1d27911657bc906268051.woff
-print.css: print-76035f4ead566a30d31cdfd75026505b.css
 active_admin.js: active_admin-b277f2a69e8dd2c836dfcb4e5ee4501c.js
 ckeditor/application.js: ckeditor/application-374c0166af1d8b596d96aaf5afe8affc.js
 ckeditor/application.css: ckeditor/application-158c9d80a63b55116f3d38446a6225af.css
