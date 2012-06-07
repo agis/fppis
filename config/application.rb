@@ -67,6 +67,6 @@ module Fppis
 
     # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
     config.assets.precompile += %w( search.js active_admin.css.scss active_admin.js )
-    config.assets.precompile += %w( pages.css posts.css albums.css print.css )
+    config.assets.precompile += %w( pages.css posts.css albums.css print.css active_admin.css )
   end
 end
