@@ -28,21 +28,21 @@
   </div>
 
   <div class="row">
-    <div class="fourcol" style="text-align:left;">
+    <div class="fourcol">
       <% @food_images.each do |image| %>
       <%= link_to album_path(image.album) do %>
       <%= image_tag image.file.url(:thumb), class: 'tn' %>
       <% end %>
       <% end %>
     </div>
-    <div class="fourcol" style="text-align:center;">
+    <div class="fourcol">
       <% @people_images.each do |image| %>
       <%= link_to album_path(image.album) do %>
       <%= image_tag image.file.url(:thumb), class: 'tn' %>
       <% end %>
       <% end %>
     </div>
-    <div class="fourcol last" style="text-align: right;">
+    <div class="fourcol last">
       <% @places_images.each do |image| %>
       <%= link_to album_path(image.album) do %>
       <%= image_tag image.file.url(:thumb), class: 'tn' %>
