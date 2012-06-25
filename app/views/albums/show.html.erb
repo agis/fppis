@@ -3,16 +3,26 @@
 
   <%= render 'album_details' %>
 
-  <%= image_tag @images.first.file.url %><br />
-  <div class="row" style="text-align: center;">
-    <%= @images.first.caption %>
+  <div id="gallery" class="ad-gallery">
+    <div class="ad-image-wrapper">
+    </div>
+
+    <div class="ad-nav">
+      <div class="ad-thumbs">
+        <ul class="ad-thumb-list">
+          <% @images.each do |image| %>
+          <li>
+            <%= link_to image.file.url do %>
+              <%= image_tag image.file.url(:thumb), alt: image.caption %>
+            <% end %>
+            </a>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <br />
-
-  <% @images.each do |image| %>
-  <%= image_tag image.file.url(:thumb) %>
-  <% end %>
 
   <hr class="nobottom" />
 </div>

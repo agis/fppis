@@ -7,7 +7,8 @@
   <%= javascript_include_tag 'application' %>
   <%= javascript_include_tag 'jquery.cycle.all' if current_page? root_path %>
   <%= csrf_meta_tags %>
-  <% if current_page?(root_path) %>
+
+  <% if current_page? root_path %>
   <script type="text/javascript">
   $(document).ready(function() {
       $('.slideshow').cycle({
@@ -19,6 +20,19 @@
       $('.thumb-slideshow').cycle({
       fx: 'fade',
       speed: 500,
+    });
+  });
+  </script>
+  <% end %>
+
+  <% if params[:controller] == 'albums' and params[:action] == 'show' %>
+  <%= stylesheet_link_tag 'jquery.ad-gallery' %>
+  <%= javascript_include_tag 'jquery.ad-gallery.min' %>
+  <script type="text/javascript">
+  $(function() {
+    var galleries = $('.ad-gallery').adGallery({
+      loader_image: '../assets/loader.gif',
+      effect: 'fade'
     });
   });
   </script>
