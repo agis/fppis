@@ -9,33 +9,33 @@
   <%= csrf_meta_tags %>
 
   <% if current_page? root_path %>
-  <script type="text/javascript">
-  $(document).ready(function() {
-      $('.slideshow').cycle({
-      fx: 'fade',
-      speed: 500,
-      delay: <%= HpMainImage.first.rotate_delay.to_i %>
-    });
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.slideshow').cycle({
+        fx: 'fade',
+        speed: 500,
+        delay: <%= HpMainImage.first.rotate_delay.to_i %>
+      });
 
-      $('.thumb-slideshow').cycle({
-      fx: 'fade',
-      speed: 500,
+        $('.thumb-slideshow').cycle({
+        fx: 'fade',
+        speed: 500,
+      });
     });
-  });
-  </script>
+    </script>
   <% end %>
 
   <% if params[:controller] == 'albums' and params[:action] == 'show' %>
-  <%= stylesheet_link_tag 'jquery.ad-gallery' %>
-  <%= javascript_include_tag 'jquery.ad-gallery.min' %>
-  <script type="text/javascript">
-  $(function() {
-    var galleries = $('.ad-gallery').adGallery({
-      loader_image: '../assets/loader.gif',
-      effect: 'fade'
+    <%= stylesheet_link_tag 'jquery.ad-gallery' %>
+    <%= javascript_include_tag 'jquery.ad-gallery.min' %>
+    <script type="text/javascript">
+    $(function() {
+      var galleries = $('.ad-gallery').adGallery({
+        loader_image: '../assets/loader.gif',
+        effect: 'fade'
+      });
     });
-  });
-  </script>
+    </script>
   <% end %>
 </head>
 <body>
