@@ -1,3 +1,4 @@
+<% # TODO: right menu alignment & center the copyright to the 4 titles & same gaps between titles %>
 <% if params[:controller] == 'albums' %>
 <div class="twelvecol last">
 <% else %>
@@ -5,16 +6,16 @@
 <% end %>
 
   <div class="twelvecol last" id="footer-menu">
-    <div class="threecol" style="margin-left:3.8%; text-align:right;">
+    <div class="threecol" style="text-align:right;">
       <%= link_to 'more fppis', more_fppis_path %>
     </div>
-    <div class="threecol" style="margin:0;">
+    <div class="threecol" style="margin:0;  text-align:right;">
       <%= link_to 'terms & conditions', terms_path %>
     </div>
-    <div class="threecol" style="margin:0;">
+    <div class="threecol" style="margin:0;  text-align:right;">
       <%= link_to 'privacy policy', policy_path %>
     </div>
-    <div class="threecol last" style="text-align:left;">
+    <div class="threecol last" style=" text-align:right;">
       <%= link_to 'sitemap', sitemap_path %>
     </div>
   </div>
