@@ -4,7 +4,7 @@ class HpMainImage < ActiveRecord::Base
                   :fifth_article_id, :sixth_article_id, :rotate_delay
 
   thumb_size = '258x174'
-  s3_host = 's3-website-ap-southeast-1.amazonaws.com'
+  s3_host = 's3-ap-southeast-1.amazonaws.com'
   s3_credentials = "#{Rails.root}/config/s3.yml"
 
   has_attached_file :one, styles: { thumb: thumb_size },

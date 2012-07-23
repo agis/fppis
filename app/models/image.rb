@@ -2,7 +2,7 @@ class Image < ActiveRecord::Base
   attr_accessible :caption, :file, :album_id, :noter_id,
                   :tag_list, :photographer_id
 
-  s3_host = 's3-website-ap-southeast-1.amazonaws.com'
+  s3_host = 's3-ap-southeast-1.amazonaws.com'
   s3_credentials = "#{Rails.root}/config/s3.yml"
 
   has_attached_file :file, styles: { thumb: '245x153' },
