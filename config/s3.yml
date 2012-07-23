@@ -1,13 +1,13 @@
 development:
-  bucket: fppis
-  access_key_id: AKIAJS5LXFFIXGEZFL3A
-  secret_access_key: 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
-  host: s3-eu-west-1.amazonaws.com
+  bucket: fppis.com
+  access_key_id: AKIAJE6NBD7WQNYFV5IQ
+  secret_access_key: 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
+  host: s3-website-ap-southeast-1.amazonaws.com
 test:
-  bucket: fppis
-  access_key_id: AKIAJS5LXFFIXGEZFL3A
-  secret_access_key: 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
+  bucket: fppis.com
+  access_key_id: AKIAJE6NBD7WQNYFV5IQ
+  secret_access_key: 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
 production:
-  bucket: fppis
-  access_key_id: AKIAJS5LXFFIXGEZFL3A
-  secret_access_key: 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
+  bucket: fppis.com
+  access_key_id: AKIAJE6NBD7WQNYFV5IQ
+  secret_access_key: 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

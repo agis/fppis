@@ -1,3 +1,4 @@
+# TODO: Implement Preview button
 ActiveAdmin.register Album do
   menu parent: "Image Albums"
   actions :all, :except => [:show]

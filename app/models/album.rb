@@ -8,4 +8,6 @@ class Album < ActiveRecord::Base
   validates :category_id, :country, :city, presence: true
 
   default_scope order("created_at DESC")
+
+  # TODO: Add a publish field
 end

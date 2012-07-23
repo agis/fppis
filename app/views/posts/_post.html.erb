@@ -5,6 +5,7 @@
       <%= post.country %>
       <%= " : " + post.city unless post.city.blank? %>
     </div>
+    <% # FIXME: why the date isn't rendered? %>
     <div class="date"><%= format_date(post.publish_date) %></div>
   </div>
 
