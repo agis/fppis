@@ -13,6 +13,9 @@ ActiveAdmin.register Album do
     end
     column :category
 
+    column :publish_date
+    column :published
+
     default_actions
   end
 end

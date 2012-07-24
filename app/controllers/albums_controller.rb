@@ -10,7 +10,7 @@ class AlbumsController < ApplicationController
   end
 
   def show
-    @album = Album.find(params[:id])
+    @album = Album.published.find(params[:id])
     @images = @album.images
   end
 
@@ -21,17 +21,17 @@ class AlbumsController < ApplicationController
     @people_images = []
     @places_images = []
 
-    albums = Album.where("category_id = 1").limit(3)
+    albums = Album.published.where("category_id = 1").limit(3)
     albums.each do |album|
       @food_images << album.images.last unless album.images.empty?
     end
 
-    albums = Album.where("category_id = 2").limit(3)
+    albums = Album.published.where("category_id = 2").limit(3)
     albums.each do |album|
       @people_images << album.images.last unless album.images.empty?
     end
 
-    albums = Album.where("category_id = 3").limit(3)
+    albums = Album.published.where("category_id = 3").limit(3)
     albums.each do |album|
       @places_images << album.images.last unless album.images.empty?
     end
@@ -39,7 +39,7 @@ class AlbumsController < ApplicationController
 
   def set_albums
     @albums = []
-    albums = Album.where("category_id = ?", @category.id).limit(12)
+    albums = Album.published.where("category_id = ?", @category.id).limit(12)
 
     albums.each do |album|
       @albums << album unless album.images.empty?
