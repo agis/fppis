@@ -13,7 +13,6 @@ ActiveAdmin.register Post do
       f.input :story_subtitle
       f.input :author
       f.input :photographer
-      # LATER: make this a multi-select field (later)
       f.input :tag_list, label: 'Tags', hint: 'Comma separated'
     end
 
@@ -44,5 +43,17 @@ ActiveAdmin.register Post do
     column :published
 
     default_actions
+  end
+
+  member_action :preview do
+    @post = Post.find(params[:id])
+  end
+
+  action_item :only => :edit do
+    link_to('Preview', preview_admin_post_path(post))
+  end
+
+  action_item :only => :preview do
+    link_to('Back to Edit Post', edit_admin_post_path(post))
   end
 end
